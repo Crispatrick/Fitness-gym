@@ -1,0 +1,9 @@
+:root {
+    --black: #000;
+    --gold: #ffd700;
+
+    --section_Padding: 1.5rem;
+}
+body{
+  margin: 0px;
+}
