@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_file\homepage.css">
     <link rel="stylesheet" href="css_files\base.css">
     <link rel="stylesheet" href="css_files\cards.css">
     <title>JC's Fitness gym</title>
@@ -16,6 +17,7 @@
 
 <body>
     <?php
+        include("html_Files\\homepage.html");
         include("html_Files\\programs.html");
     ?>
 </body>
