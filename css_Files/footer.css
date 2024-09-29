@@ -1,0 +1,57 @@
+/* footer section */
+footer{
+    width: 100%;
+    position: absolute;
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 0px;
+    font-size:10px;
+    font-family: 'Trebuchet MS';
+    line-height: 18px;
+    display: block;
+  }
+
+/* email section */
+.footer_email{
+    font-size: 25px;
+    color: #d2f121;
+}
+
+/* info section */
+.footer_info{
+        flex-basis: 25%;
+        padding: 10px;
+}
+
+/* copyright section */
+.footer_copyright{
+        text-align: center;
+    }
+
+/* rows section */
+.footer_row{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap:wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      
+
+/* logo section */
+.footer_logo{
+        padding-top: 45%;
+        width: 250px;
+
+        }
+
+/*site section */
+.site{
+        width: fit-content;
+        margin-bottom: 20px;
+        position: left;
+        width: 140px;           
+        height: 65px;
+        background-color: whitesmoke;
+        }
