@@ -7,3 +7,9 @@
 body{
   margin: 0px;
 }
+#hrG{
+  width: 30%;
+  border: .15rem solid;
+  border-color: var(--gold);
+  border-radius: 5px;
+}

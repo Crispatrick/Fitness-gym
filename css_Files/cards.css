@@ -103,9 +103,3 @@
     margin: 1rem;
     font-family: monospace;
 }
-#programs hr{
-    width: 30%;
-    border: .15rem solid;
-    border-color: var(--gold);
-    border-radius: 5px;
-}
