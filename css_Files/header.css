@@ -1,0 +1,39 @@
+.header_navbar{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    cursor: pointer;
+}
+
+/* navbar/ul section */
+.header_navbar ul {
+    float:right;
+    margin-right: 45px;
+}
+
+/* navbar/ul li section */
+.header_navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 35px;
+    text-decoration: none;
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* navbar/ul li a section */
+.header_navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* logo section */
+.header_logo{
+    width: 255px;
+    cursor: pointer;
+}
