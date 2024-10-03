@@ -1,8 +1,10 @@
 #preg{
-    background-image: url("../images/pReg/Treadmill.png");
+    /* background-image: url("../images/pReg/Treadmill.png"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.781),rgba(0, 0, 0, 0.781)),url('../images/pReg/Treadmill.png');
     background-size: cover;
     padding: 2rem;
     display: flex;
+    justify-content: space-evenly;
 }
 #pRegG1{
     padding: 1.5rem;
@@ -64,6 +66,25 @@
     flex-direction: column;       /* Stack children vertically */
     justify-content: center;      /* Center children vertically */
     align-items: center;
+    text-align: center;
 
-    
+    font-size: 3rem;
+}
+#pRegG2 h1{
+    display: block;
+    color: var(--gold);
+    font-size: 4.5rem;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+
+#pRegG2 h2{
+    display: block;
+    margin: 0px;
+    -webkit-text-stroke: 2px white;
+    color: #ffffff00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
 }
