@@ -19,6 +19,7 @@
 <body>
     <?php
         include("html_Files\\homepage.html");
+        include("html_Files\\plans.html");
         include("html_Files\\programs.html");
         include("html_Files\\footer.html");
     ?>

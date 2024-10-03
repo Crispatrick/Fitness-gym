@@ -1,0 +1,184 @@
+/* Plan Section */
+
+/* Header text in the upper left corner */
+.header-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#plans {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('plansbg.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the image container */
+.image-container {
+  width: 80%; /* Adjust width to fit your design */
+  display: flex;
+  justify-content: space-between;  /* Spread plans evenly across the container */
+  padding: 20px;
+}
+
+/* Plan boxes */
+.child-div {
+  width: 100vw;
+  height: 70vh;
+  padding: 20px;
+  margin-top: 10%;
+  color: gold;
+  background-color: rgba(0, 0, 0, 0.79);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.child1-div {
+  width: 120vw;
+  height: 70vh;
+  padding: 20px;
+  margin-top: 10%;
+  color: gold;
+  background-color: rgba(0, 0, 0, 0.79);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+/* Bronze Plan */
+.bronze {
+  border-top-left-radius: 30px;  /* Round top-left */
+  border-bottom-left-radius: 30px;  /* Round bottom-left */
+  font-size: 13px;
+}
+
+.p_bronzesign {
+  font-size: 30px;
+  margin-left: 35%;
+  margin-top: 15%;
+  margin-bottom: 1%;
+}
+
+.p_bronzeprice {
+  font-size: 45px;
+  margin-left: 30%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/* Silver Plan */
+.silver {
+  font-size: 13px;
+}
+
+.p_silversign {
+  font-size: 30px;
+  margin-left: 35%;
+  margin-top: 15%;
+  margin-bottom: 1%;
+}
+
+.p_silverprice {
+  font-size: 45px;
+  margin-left: 27%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/* Gold Plan */
+.gold {
+  border-top-right-radius: 30px;  /* Round top-right */
+  border-bottom-right-radius: 30px;  /* Round bottom-right */
+  font-size: 13px;
+}
+
+.p_goldsign {
+  font-size: 30px;
+  margin-left: 35%;
+  margin-top: 15%;
+  margin-bottom: 1%;
+}
+
+.p_goldprice {
+  font-size: 45px;
+  margin-left: 25%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/* Personalize Plan - rounded on both sides */
+.personalize {
+  flex: 1;
+  padding: 10px;
+  font-size: 13px;
+  color: white;
+  background-color: rgba(92, 80, 11, 0.626);
+  margin-left: 15px;              /* Add space between Gold and Personalize Plan */
+  border-radius: 30px;            /* Round all corners of Personalize Plan */
+}
+
+.p_personalizesign {
+  font-size: 30px;
+  margin-left: 18%;
+  margin-top: 18%;
+  margin-bottom: 1%;
+}
+
+.p_personalizeprice {
+  font-size: 40px;
+  margin-left: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/* Button Styles */
+.join-button {
+  margin-top: 15px;           /* Space above the button */
+  padding: 10px 20px;         /* Padding for the buttons */
+  width: 100px;
+  height: 50px;
+  color: white;                /* Text color */
+  background-color: rgba(255, 217, 0, 0.697);
+  border: none;               /* Remove default border */
+  border-radius: 5px;         /* Rounded corners */
+  cursor: pointer;             /* Pointer cursor on hover */
+  font-size: 16px;            /* Font size for buttons */
+  margin-left: 30%;
+}
+
+.customize-button {
+  margin-top: 15px;           /* Space above the button */
+  padding: 10px 20px;         /* Padding for the buttons */
+  width: 120px;
+  height: 50px;
+  color: white;                /* Text color */
+  background-color: rgba(255, 217, 0, 0.697);
+  border: none;               /* Remove default border */
+  border-radius: 5px;         /* Rounded corners */
+  cursor: pointer;             /* Pointer cursor on hover */
+  font-size: 16px;            /* Font size for buttons */
+  margin-left: 30%;
+}
+
+/* Button hover effects */
+.join-button:hover, .customize-button:hover {
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  flex-direction: inherit;
+}
+
+/* End of plan section */
