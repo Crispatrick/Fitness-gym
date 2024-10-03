@@ -8,40 +8,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* navbar section */
-.home_navbar{
-    width: 100%;
-    margin: auto;
-    padding: 3px 0;    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-/* navbar/ul li a section */
-.home_navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 30px;
-    text-decoration: none;
-    font-size: 40px;
-    color: #fff;
-    text-transform: uppercase;
-}
-.home_navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/* logo section */
-.home_logo{
-    width: 250px;
-    cursor: pointer;
-}
-
 /* journey section */
 .home_text{
     width: 100%;
