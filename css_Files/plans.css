@@ -1,4 +1,4 @@
-/* Plan Section */
+/* Plans Section */
 
 /* Header text in the upper left corner */
 .header-text {
@@ -11,15 +11,14 @@
 }
 
 #plans {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; /* adjust the plan according to the website design */
   width: 100vw;
   height: 100vh;
-  background-image: url('plansbg.png'); 
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url('../images/Plans/plansbg.png');
+  background-size: cover;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +26,7 @@
 
 /* Style for the image container */
 .image-container {
-  width: 80%; /* Adjust width to fit your design */
+  width: 90%; /* Adjust width to fit your design */
   display: flex;
   justify-content: space-between;  /* Spread plans evenly across the container */
   padding: 20px;
@@ -35,7 +34,7 @@
 
 /* Plan boxes */
 .child-div {
-  width: 100vw;
+  width: 20vw;
   height: 70vh;
   padding: 20px;
   margin-top: 10%;
@@ -47,7 +46,7 @@
 }
 
 .child1-div {
-  width: 120vw;
+  width: 50vw;
   height: 70vh;
   padding: 20px;
   margin-top: 10%;
