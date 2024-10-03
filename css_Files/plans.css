@@ -1,18 +1,18 @@
-/* Plans Section */
-
 /* Header text in the upper left corner */
 .header-text {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  display: flex;
   font-size: 80px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  position: absolute; /* Ensures the header text stays fixed at the top */
+  top: 20px;          /* Adjust the distance from the top */
+  left: 20px;         /* Adjust the distance from the left */
+  z-index: 1;         /* Ensures the header is above other elements */
 }
 
+/* Plans Section */
 #plans {
-  position: relative; /* adjust the plan according to the website design */
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Stays below the header */
 }
 
 /* Style for the image container */
@@ -33,9 +34,7 @@
 }
 
 /* Plan boxes */
-.child-div {
-  width: 20vw;
-  height: 70vh;
+.child-div, .child1-div {
   padding: 20px;
   margin-top: 10%;
   color: gold;
@@ -45,16 +44,14 @@
   justify-content: baseline;
 }
 
+.child-div {
+  width: 20vw;
+  height: 70vh;
+}
+
 .child1-div {
   width: 50vw;
   height: 70vh;
-  padding: 20px;
-  margin-top: 10%;
-  color: gold;
-  background-color: rgba(0, 0, 0, 0.79);
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
 }
 
 /* Bronze Plan */
@@ -64,37 +61,9 @@
   font-size: 13px;
 }
 
-.p_bronzesign {
-  font-size: 30px;
-  margin-left: 35%;
-  margin-top: 15%;
-  margin-bottom: 1%;
-}
-
-.p_bronzeprice {
-  font-size: 45px;
-  margin-left: 30%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-
 /* Silver Plan */
 .silver {
   font-size: 13px;
-}
-
-.p_silversign {
-  font-size: 30px;
-  margin-left: 35%;
-  margin-top: 15%;
-  margin-bottom: 1%;
-}
-
-.p_silverprice {
-  font-size: 45px;
-  margin-left: 27%;
-  margin-top: 1%;
-  margin-bottom: 1%;
 }
 
 /* Gold Plan */
@@ -104,21 +73,23 @@
   font-size: 13px;
 }
 
-.p_goldsign {
+.p_bronzesign, .p_silversign, .p_goldsign {
   font-size: 30px;
+  color: white;
   margin-left: 35%;
   margin-top: 15%;
   margin-bottom: 1%;
 }
 
-.p_goldprice {
+.p_bronzeprice, .p_silverprice, .p_goldprice {
   font-size: 45px;
-  margin-left: 25%;
+  color: white;
+  margin-left: 30%;
   margin-top: 1%;
   margin-bottom: 1%;
 }
 
-/* Personalize Plan - rounded on both sides */
+/* Personalize Plan */
 .personalize {
   flex: 1;
   padding: 10px;
@@ -131,18 +102,16 @@
 
 .p_personalizesign {
   font-size: 30px;
-  margin-left: 18%;
-  margin-top: 18%;
+  color: white;
+  margin-left: 15%;
+  margin-top: 15%;
   margin-bottom: 1%;
 }
 
 .p_personalizeprice {
   font-size: 40px;
   margin-left: 4%;
-  margin-top: 1%;
-  margin-bottom: 1%;
 }
-
 /* Button Styles */
 .join-button {
   margin-top: 15px;           /* Space above the button */
