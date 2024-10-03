@@ -1,5 +1,6 @@
 #preg{
     background-image: url("../images/pReg/Treadmill.png");
+    background-size: cover;
     padding: 2rem;
     display: flex;
 }
@@ -10,8 +11,22 @@
     background-color: rgba(10, 10, 17, 0.911);
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
+#pRegG1 h1{
+    margin: 0px;
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+#pRegForm{
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 1rem; /* Space between items */
+}
 #pRegForm > *{
     display: block;
+    gap: .7rem;
 }
 
 .preFormBox{
@@ -29,4 +44,26 @@
     width: 100%; /* Ensure each child takes full width */
     box-sizing: border-box; /* Include padding and borders in width calculation */
 }
+#preBtn{
+    align-self: center;
+    width: 50%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--gold);
+    cursor: pointer; /* Change cursor on hover */
+    border-color: rgba(240, 248, 255, 0);
+    color: var(--black);
+}
+#preBtn:active{
+    background-color: rgb(131, 116, 31);
+}
 
+#pRegG2{
+    display: flex;                /* Enable Flexbox */
+    flex-direction: column;       /* Stack children vertically */
+    justify-content: center;      /* Center children vertically */
+    align-items: center;
+
+    
+}
