@@ -10,19 +10,19 @@
         <div id="pRegG1">
             <h1>JOIN NOW!</h1>
             <hr id="hrG" style="margin-bottom: 2rem;">
-            <form action="" method="post" id="pRegForm">
+            <form action="pRegSubmission.php" method="post" id="pRegForm">
                 <div class="preFormBox" id="preName">
                     <input type="text" placeholder="FIRST NAME" name="fName" id="fName" required>
                     <input type="text" placeholder="LAST NAME" name="lName" id="lName" required>
                 </div>
                 <input type="text" class="preFormBox" placeholder="CONTACT NUMBER" name="number" id="number" required>
                 <input type="text" class="preFormBox" placeholder="EMAIL ADDRESS" name="email" id="email" required>
-                <select class="preFormBox">
+                <select class="preFormBox" name="inquiry" id="inquiry">
                     <option value="" disabled selected>TYPE OF INQUIRY</option>
-                    <option value="">WALK IN</option>
-                    <option value="">MEMBERSHIP</option>
+                    <option value="WALK IN">WALK IN</option>
+                    <option value="MEMBERSHIP">MEMBERSHIP</option>
                 </select>
-                <input type="date" name="Sched" id="sched" class="preFormBox" required>
+                <input type="date" name="sched" id="sched" class="preFormBox" required>
                 <button type="submit" id="preBtn">INQUIRE</button>
             </form>
         </div>
@@ -31,5 +31,5 @@
             <h2>EMBRACE THE CHANGE</h2>
         </div>
     </section>
-<!-- </body>
+<!-- </body> 
 </html> -->
