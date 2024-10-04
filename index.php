@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css_files\homepage.css">
     <link rel="stylesheet" href="css_files\base.css">
     <link rel="stylesheet" href="css_files\cards.css">
+    <link rel="stylesheet" href="css_files\plans.css">
     <link rel="stylesheet" href="css_files\footer.css">
     <title>JC's Fitness gym</title>
 </head>
@@ -22,6 +23,7 @@
         include("html_Files\\header.html");
         include("html_Files\\homepage.html");
         include("html_Files\\programs.html");
+        include("html_Files\\plans.html");
         include("html_Files\\footer.html");
     ?>
 </body>
