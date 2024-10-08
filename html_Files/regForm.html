@@ -7,59 +7,93 @@
 </head>
 <body>
     
-    <div class="parent2">
-        <form action="receipt.pe.php" method="post">
+    <div class="parent">
+        <form action="regFormSubmission.php" method="post">
 
             <br>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> Name: </label>
-            <input type="text" name="name" placeholder="Enter your Last Name, First Name and Middle Name" required>
+            <p> PERSONAL INFORMATION </p>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> Email: </label>
-            <input type="text" name="email" placeholder="Enter your email" required><br>
+            <label style="display: inline-block; width: 100px; text-align: center;"> FIRST NAME </label>
+            <input type="text" name="fname" placeholder="Enter your First Name" required>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> Phone: </label>
-            <input type="tel" name="phone" placeholder="+63" required><br>
+            <label style="display: inline-block; width: 100px; text-align: center;"> LAST NAME </label>
+            <input type="text" name="lname" placeholder="Enter your Last Name" required>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> Date: </label>
-            <input type="date" name="date" required>
-            
-            <br>
+            <label style="display: inline-block; width: 100px; text-align: center;"> DATE OF BIRTH </label>
+            <input type="date" name="birthDate" required>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> Time: </label>
-            <input type="time" name="time" required><br>
-
-            <label style="display: inline-block; width: 100px; text-align: center;" for="treservation"> Reservation for: </label><br>
-            <select id="treservation" name="treservation" required>
-                    <option value="0" disabled selected>-Select-</option>
-                    <option value="1">Mini Party for 10-15 pax - Php.9,999.00</option>
-                    <option value="2">Special Events for 30 pax - Php.14,999.00</option>
-                    
-            </select>
-            
-            <br><br>
-
-            <label style="display: inline-block; width: 100px; text-align: left;"> Mode of Payment: </label>&nbsp;&nbsp;
-            <input list="Payment" name="pmethod" placeholder="-Select-" required>
-                <datalist id="Payment">
-                <option value="Gcash">
-                <option value="Paypal">
-                <option value="Cash">
-                <option value="Visa">
-                <option value="Mastercard">
+            <label style="display: inline-block; width: 100px; text-align: left;"> GENDER </label>
+            <input list="gender" name="gendertype" placeholder="-Select-" required>
+                <datalist id="gender">
+                <option value="MALE">
+                <option value="FEMALE">
+                <option value="PREFER NOT TO SAY">
                 </datalist>
 
             <br><br>
 
-            <label style="display: inline-block; width: 100px; text-align: left;"> Remarks: </label>
-            <textarea name="tbox"></textarea>
+            <label style="display: inline-block; width: 100px; text-align: center;"> ADDRESS </label>
+            <input type="text" name="address" placeholder="Enter your Address" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> EMAIL ADDRESS </label>
+            <input type="time" name="time" required><br>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label>
+            <input type="tel" name="contact" placeholder="+63" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> HEIGHT </label>
+            <input type="text" name="height" placeholder="Enter Height" required>                
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> WEIGHT </label>
+            <input type="text" name="weight" placeholder="Enter Weight" required>    
+
+            <br><br>
+
+            <p> MEMBERSHIP DETAILS </p>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> MEMBERSHIP TYPE </label>
+            <input list="membershipType" name="mType" placeholder="-Select-" required>
+                <datalist id="Payment">
+                <option value="BRONZE">
+                <option value="SILVER">
+                <option value="GOLD">
+                <option value="CUSTOMIZE PLAN">
+                </datalist>
+
+            <br><br>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> START DATE </label>
+            <input type="date" name="startDate" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> END DATE </label>
+            <input type="date" name="endDate" required>
+
+            <br><br>
+
+            <p> EMERGENCY CONTACT </p>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> CONTACT NAME </label>
+            <input type="text" name="fname" placeholder="Enter your First Name" required>
              
+            <label style="display: inline-block; width: 100px; text-align: left;"> RELATIONSHIP </label>
+            <input list="relationship" name="Rel" placeholder="-Select-" required>
+                <datalist id="Relationship">
+                <option value="MOTHER">
+                <option value="FATHER">
+                <option value="WIFE">
+                <option value="HUSBAND">
+                </datalist>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label>
+            <input type="tel" name="Econtact" placeholder="+63" required>
+
+            <br><br>
+
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="RESERVE"><br>
+            <input type="submit" value="SUBMIT"><br>
             
         </form>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <img class="pic" src="p2.JPG" float= "right">
 </div>   
 
 </body>
