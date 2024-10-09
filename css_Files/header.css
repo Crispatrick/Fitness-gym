@@ -11,16 +11,16 @@
 /* navbar/ul section */
 .header_navbar ul {
     float:right;
-    margin-right: 45px;
+    margin-right: 40px;
 }
 
 /* navbar/ul li section */
 .header_navbar ul li{
     list-style: none;
     display: inline-block;
-    margin: 0 35px;
+    margin: 0 30px;
     text-decoration: none;
-    font-size: 42px;
+    font-size: 30px;
     color: #fff;
     text-transform: uppercase;
 }
@@ -34,6 +34,6 @@
 
 /* logo section */
 .header_logo{
-    width: 255px;
+    width: 190px;
     cursor: pointer;
 }
