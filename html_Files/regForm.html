@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="parent">
+        <form action="regFormSubmission.php" method="post">
+
+            <br>
+
+            <p> PERSONAL INFORMATION </p>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> FIRST NAME </label>
+            <input type="text" name="fname" placeholder="Enter your First Name" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> LAST NAME </label>
+            <input type="text" name="lname" placeholder="Enter your Last Name" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> DATE OF BIRTH </label>
+            <input type="date" name="birthDate" required>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> GENDER </label>
+            <input list="gender" name="gendertype" placeholder="-Select-" required>
+                <datalist id="gender">
+                <option value="MALE">
+                <option value="FEMALE">
+                <option value="PREFER NOT TO SAY">
+                </datalist>
+
+            <br><br>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> ADDRESS </label>
+            <input type="text" name="address" placeholder="Enter your Address" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> EMAIL ADDRESS </label>
+            <input type="time" name="time" required><br>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label>
+            <input type="tel" name="contact" placeholder="+63" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> HEIGHT </label>
+            <input type="text" name="height" placeholder="Enter Height" required>                
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> WEIGHT </label>
+            <input type="text" name="weight" placeholder="Enter Weight" required>    
+
+            <br><br>
+
+            <p> MEMBERSHIP DETAILS </p>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> MEMBERSHIP TYPE </label>
+            <input list="membershipType" name="mType" placeholder="-Select-" required>
+                <datalist id="Payment">
+                <option value="BRONZE">
+                <option value="SILVER">
+                <option value="GOLD">
+                <option value="CUSTOMIZE PLAN">
+                </datalist>
+
+            <br><br>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> START DATE </label>
+            <input type="date" name="startDate" required>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> END DATE </label>
+            <input type="date" name="endDate" required>
+
+            <br><br>
+
+            <p> EMERGENCY CONTACT </p>
+
+            <label style="display: inline-block; width: 100px; text-align: center;"> CONTACT NAME </label>
+            <input type="text" name="fname" placeholder="Enter your First Name" required>
+             
+            <label style="display: inline-block; width: 100px; text-align: left;"> RELATIONSHIP </label>
+            <input list="relationship" name="Rel" placeholder="-Select-" required>
+                <datalist id="Relationship">
+                <option value="MOTHER">
+                <option value="FATHER">
+                <option value="WIFE">
+                <option value="HUSBAND">
+                </datalist>
+
+            <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label>
+            <input type="tel" name="Econtact" placeholder="+63" required>
+
+            <br><br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="SUBMIT"><br>
+            
+        </form>
+</div>   
+
+</body>
+</html>

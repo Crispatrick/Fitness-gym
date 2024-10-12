@@ -11,7 +11,7 @@
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(10, 10, 17, 0.911);
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    border: 1px solid rgba(255, 229, 229, 0.125);
 }
 #pRegG1 h1{
     margin: 0px;

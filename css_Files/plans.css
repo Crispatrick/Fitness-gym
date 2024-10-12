@@ -1,0 +1,174 @@
+/* Header text in the upper left corner */
+.header-img {
+  display: flex;
+  position: absolute; /* Ensures the header text stays fixed at the top */
+  top: 40px;          /* Adjust the distance from the top */
+  left: 230px;         /* Adjust the distance from the left */
+  z-index: 1;         /* Ensures the header is above other elements */
+}
+
+/* Plans Section */
+#plans {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/Plans/plansbg.png');
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Stays below the header */
+}
+
+/* Style for the image container */
+.image-container {
+  width: 90%; /* Adjust width to fit your design */
+  display: flex;
+  justify-content: space-between;  /* Spread plans evenly across the container */
+  padding: 20px;
+}
+
+/* Plan boxes */
+.child-div, .child1-div {
+  padding: 20px;
+  margin-top: 14%;
+  color: white;
+  font-family: Lucida Sans;
+  background-color: rgba(0, 0, 0, 0.79);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.child-div {
+  width: 20vw;
+  height: 61vh;
+}
+
+.child1-div {
+  width: 50vw;
+  height: 63.5vh;
+}
+
+/* Bronze Plan */
+.bronze {
+  border-top-left-radius: 30px;  /* Round top-left */
+  border-bottom-left-radius: 30px;  /* Round bottom-left */
+  font-size: 14px;
+}
+
+.p_bronzeprice {
+  font-size: 50px;
+  font-family: Impact;
+  color: gold;
+  margin-left: 26%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+}
+
+/* Silver Plan */
+.silver {
+  font-size: 14px;
+}
+
+.p_silverprice {
+  font-size: 50px;
+  font-family: Impact;
+  color: gold;
+  margin-left: 22%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+}
+
+/* Gold Plan */
+.gold {
+  border-top-right-radius: 30px;  /* Round top-right */
+  border-bottom-right-radius: 30px;  /* Round bottom-right */
+  font-size: 14px;
+}
+
+.p_goldprice {
+  font-size: 50px;
+  font-family: Impact;
+  color: gold;
+  margin-left: 21%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+}
+
+.p_bronzesign, .p_silversign, .p_goldsign {
+  font-size: 30px;
+  font-family: Times New Roman;
+  color: white;
+  margin-left: 30%;
+  margin-top: 15%;
+  margin-bottom: 1%;
+}
+
+/* Personalize Plan */
+.personalize {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(92, 80, 11, 0.626);
+  margin-left: 15px;              /* Add space between Gold and Personalize Plan */
+  border-radius: 30px;            /* Round all corners of Personalize Plan */
+}
+
+.p_personalizesign {
+  font-size: 30px;
+  font-family: Times New Roman;
+  color: white;
+  margin-top: 20%;
+  align-items: center;
+}
+
+.p_personalizeprice {
+  font-size: 30px;
+  color: gold;
+  font-family: Impact;
+  margin-left: 15%;
+  margin-top: -5%;
+  margin-bottom: 4%;
+}
+/* Button Styles */
+.join-button {
+  margin-top: 15px;           /* Space above the button */
+  padding: 10px 20px;         /* Padding for the buttons */
+  width: 100px;
+  height: 50px;
+  color: white;                /* Text color */
+  background-color: rgba(255, 217, 0, 0.697);
+  border: none;               /* Remove default border */
+  border-radius: 5px;         /* Rounded corners */
+  cursor: pointer;             /* Pointer cursor on hover */
+  font-size: 16px;            /* Font size for buttons */
+  margin-left: 30%;
+}
+
+.customize-button {
+  margin-top: 15px;           /* Space above the button */
+  padding: 10px 20px;         /* Padding for the buttons */
+  width: 120px;
+  height: 50px;
+  color: white;                /* Text color */
+  background-color: rgba(255, 217, 0, 0.697);
+  border: none;               /* Remove default border */
+  border-radius: 5px;         /* Rounded corners */
+  cursor: pointer;             /* Pointer cursor on hover */
+  font-size: 16px;            /* Font size for buttons */
+  margin-left: 30%;
+}
+
+/* Button hover effects */
+.join-button:hover, .customize-button:hover {
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  flex-direction: inherit;
+}
+
+/* End of plan section */
