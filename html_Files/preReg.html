@@ -8,23 +8,41 @@
 <body> -->
     <section id="preg">
         <div id="pRegG1">
-            <h1>JOIN NOW!</h1>
-            <hr id="hrG" style="margin-bottom: 2rem;">
-            <form action="pRegSubmission.php" method="post" id="pRegForm">
-                <div class="preFormBox" id="preName">
-                    <input type="text" placeholder="FIRST NAME" name="fName" id="fName" required>
-                    <input type="text" placeholder="LAST NAME" name="lName" id="lName" required>
-                </div>
-                <input type="text" class="preFormBox" placeholder="CONTACT NUMBER" name="number" id="number" required>
-                <input type="text" class="preFormBox" placeholder="EMAIL ADDRESS" name="email" id="email" required>
-                <select class="preFormBox" name="inquiry" id="inquiry">
-                    <option value="" disabled selected>TYPE OF INQUIRY</option>
-                    <option value="WALK IN">WALK IN</option>
-                    <option value="MEMBERSHIP">MEMBERSHIP</option>
-                </select>
-                <input type="date" name="sched" id="sched" class="preFormBox" required>
-                <button type="submit" id="preBtn">INQUIRE</button>
-            </form>
+            <div class="formElement">
+                <h1>LOGIN</h1>
+                <hr id="hrG" style="margin-bottom: 2rem;">       
+
+                <!-- TODO
+                !  need pa iconnect sa profile.php
+                !  kunin yung email saka pass sa reg database tapos compare if same
+                !  kunin yung info ng profile tas display  
+                -->
+
+                <form action="pRegSubmission.php" method="post" id="pRegForm">
+                    <input type="text" class="preFormBox" placeholder="EMAIL" name="emailLogin" id="emailLogin" required>
+                    <input type="text" class="preFormBox" placeholder="PASSWORD" name="pass" id="pass" required>
+                    <button type="submit" id="preBtn">LOGIN</button>
+                </form>         
+            </div>
+            <div class="formElement">
+                <h1>INQUIRE</h1>
+                <hr id="hrG" style="margin-bottom: 2rem;">
+                <form action="pRegSubmission.php" method="post" id="pRegForm">
+                    <div class="preFormBox" id="preName">
+                        <input type="text" placeholder="FIRST NAME" name="fName" id="fName" required>
+                        <input type="text" placeholder="LAST NAME" name="lName" id="lName" required>
+                    </div>
+                    <input type="text" class="preFormBox" placeholder="CONTACT NUMBER" name="number" id="number" required>
+                    <input type="text" class="preFormBox" placeholder="EMAIL ADDRESS" name="email" id="email" required>
+                    <select class="preFormBox" name="inquiry" id="inquiry">
+                        <option value="" disabled selected>TYPE OF INQUIRY</option>
+                        <option value="WALK IN">WALK IN</option>
+                        <option value="MEMBERSHIP">MEMBERSHIP</option>
+                    </select>
+                    <input type="date" name="sched" id="sched" class="preFormBox" required>
+                    <button type="submit" id="preBtn">INQUIRE</button>
+                </form>
+            </div>
         </div>
         <div id="pRegG2">
             <h1>JOIN THE MOVEMENT</h1>
