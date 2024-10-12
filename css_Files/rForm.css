@@ -23,7 +23,10 @@ html, body {
 .parent{
     display: flex;
     justify-content: space-evenly;
-    font-size: 15px;
+    margin-left: 2%;
+    text-align: left;
+    margin: 0 auto; /* centers the form if you want it centered horizontally */
+    max-width: 500px; /* optional: sets a max-width for the form */
 }
 
 .p_regForm {
@@ -33,10 +36,15 @@ html, body {
     color: white;
     margin-top: 10%;
     margin-bottom: 8%;
+    align-items: center;
+    text-align: center; /* Center the text */
+    font-weight: bold;
 }
 
 .p_personalInfo {
     display: flex;
+    align-items: center;
+    justify-content: baseline;
     font-size: 20px;
     font-family: Times New Roman;
     color: gold;
@@ -69,3 +77,4 @@ html, body {
     font-family: Times New Roman;
     color: gold;
 }
+
