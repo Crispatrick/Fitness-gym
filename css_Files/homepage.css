@@ -43,5 +43,8 @@
     margin-top: 170px;
     color: #fff;
     cursor: pointer;
-    text-decoration: none;
+}
+
+a {
+    text-decoration: none; /* Removes the underline from all links */
 }

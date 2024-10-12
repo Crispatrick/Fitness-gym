@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css_Files/rForm.css">
+    <title>Registration Form</title>
 </head>
 <body>
     
-    <div class="parent">
-        <form action="regFormSubmission.php" method="post">
+    <section id="rform">
+        <div class="parent">
+            <form action="regFormSubmission.php" method="post">   
+            <p class="p_regForm"> REGISTRATION FORM </p>   
 
-            <br>
+            <p class="p_personalInfo"> PERSONAL INFORMATION </p> 
+            
+ <!--            <label style="display: inline-block; width: 100px; text-align: center;"> FIRST NAME </label> -->
+            <input type="text" name="fname" placeholder="FIRST NAME" required>
 
-            <p> PERSONAL INFORMATION </p>
-
-            <label style="display: inline-block; width: 100px; text-align: center;"> FIRST NAME </label>
-            <input type="text" name="fname" placeholder="Enter your First Name" required>
-
-            <label style="display: inline-block; width: 100px; text-align: center;"> LAST NAME </label>
-            <input type="text" name="lname" placeholder="Enter your Last Name" required>
-
-            <label style="display: inline-block; width: 100px; text-align: center;"> DATE OF BIRTH </label>
-            <input type="date" name="birthDate" required>
-
-            <label style="display: inline-block; width: 100px; text-align: left;"> GENDER </label>
-            <input list="gender" name="gendertype" placeholder="-Select-" required>
-                <datalist id="gender">
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> LAST NAME </label> -->
+            <input type="text" name="lname" placeholder="LAST NAME" required>
+<!-- 
+            <label style="display: inline-block; width: 100px; text-align: center;"> DATE OF BIRTH </label> -->
+            <input type="date" name="birthDate" placeholder="DATE OF BIRTH" required>
+<!-- 
+            <label style="display: inline-block; width: 100px; text-align: left;"> GENDER </label> -->
+            <input list="gender" name="gender" placeholder="-SELECT-" required>
+                <datalist id="genderType">
                 <option value="MALE">
                 <option value="FEMALE">
                 <option value="PREFER NOT TO SAY">
@@ -33,51 +34,48 @@
 
             <br><br>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> ADDRESS </label>
-            <input type="text" name="address" placeholder="Enter your Address" required>
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> ADDRESS </label> -->
+            <input type="text" name="address" placeholder="ADDRESS" required>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> EMAIL ADDRESS </label>
-            <input type="time" name="time" required><br>
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> EMAIL ADDRESS </label> -->
+            <input type="text" name="time" placeholder="EMAIL ADDRESS" required><br>
 
-            <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label>
-            <input type="tel" name="contact" placeholder="+63" required>
+<!--             <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label> -->
+            <input type="tel" name="contact" placeholder="CONTACT NUMBER" required>
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> HEIGHT </label>
-            <input type="text" name="height" placeholder="Enter Height" required>                
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> HEIGHT </label> -->
+            <input type="text" name="height" placeholder="HEIGHT" required>                
 
-            <label style="display: inline-block; width: 100px; text-align: center;"> WEIGHT </label>
-            <input type="text" name="weight" placeholder="Enter Weight" required>    
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> WEIGHT </label> -->
+            <input type="text" name="weight" placeholder="WEIGHT" required>    
 
             <br><br>
 
-            <p> MEMBERSHIP DETAILS </p>
+            <p class="p_membershipDetails"> MEMBERSHIP DETAILS </p>
 
-            <label style="display: inline-block; width: 100px; text-align: left;"> MEMBERSHIP TYPE </label>
-            <input list="membershipType" name="mType" placeholder="-Select-" required>
-                <datalist id="Payment">
+<!--             <label style="display: inline-block; width: 100px; text-align: left;"> MEMBERSHIP TYPE </label> -->
+            <input list="membershipType" name="mType" placeholder="-SELECT-" required>
+                <datalist id="memberType">
                 <option value="BRONZE">
                 <option value="SILVER">
                 <option value="GOLD">
                 <option value="CUSTOMIZE PLAN">
                 </datalist>
 
-            <br><br>
-
-            <label style="display: inline-block; width: 100px; text-align: center;"> START DATE </label>
+            <p class="p_startDate"> START DATE </p>
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> START DATE </label> -->
             <input type="date" name="startDate" required>
-
-            <label style="display: inline-block; width: 100px; text-align: center;"> END DATE </label>
+            <p class="p_endDate"> END DATE </p>
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> END DATE </label> -->
             <input type="date" name="endDate" required>
 
-            <br><br>
+            <p class="p_emergencyContact"> EMERGENCY CONTACT </p>
 
-            <p> EMERGENCY CONTACT </p>
-
-            <label style="display: inline-block; width: 100px; text-align: center;"> CONTACT NAME </label>
-            <input type="text" name="fname" placeholder="Enter your First Name" required>
+<!--             <label style="display: inline-block; width: 100px; text-align: center;"> CONTACT NAME </label> -->
+            <input type="text" name="fname" placeholder="CONTACT NAME" required>
              
-            <label style="display: inline-block; width: 100px; text-align: left;"> RELATIONSHIP </label>
-            <input list="relationship" name="Rel" placeholder="-Select-" required>
+<!--             <label style="display: inline-block; width: 100px; text-align: left;"> RELATIONSHIP </label> -->
+            <input list="relationship" name="Rel" placeholder="-SELECT-" required>
                 <datalist id="Relationship">
                 <option value="MOTHER">
                 <option value="FATHER">
@@ -85,16 +83,15 @@
                 <option value="HUSBAND">
                 </datalist>
 
-            <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label>
-            <input type="tel" name="Econtact" placeholder="+63" required>
-
-            <br><br>
-
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--             <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label> -->
+            <input type="tel" name="Econtact" placeholder="CONTACT NUMBER" required>
+            <br>
             <input type="submit" value="SUBMIT"><br>
-            
-        </form>
-</div>   
+
+            </form>
+        </div> 
+    </section>  
 
 </body>
 </html>
+

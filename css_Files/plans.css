@@ -31,7 +31,9 @@
 }
 
 /* Plan boxes */
-.child-div, .child1-div {
+.child-div {
+  width: 20vw;
+  height: 61vh;
   padding: 20px;
   margin-top: 14%;
   color: white;
@@ -42,14 +44,17 @@
   justify-content: baseline;
 }
 
-.child-div {
-  width: 20vw;
-  height: 61vh;
-}
-
 .child1-div {
   width: 50vw;
   height: 63.5vh;
+  padding: 20px;
+  margin-top: 14%;
+  color: white;
+  font-family: Lucida Sans;
+  background-color: rgba(0, 0, 0, 0.79);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
 }
 
 /* Bronze Plan */
@@ -146,6 +151,8 @@
   border-radius: 5px;         /* Rounded corners */
   cursor: pointer;             /* Pointer cursor on hover */
   font-size: 16px;            /* Font size for buttons */
+  text-transform: uppercase;
+  font-weight: bolder;
   margin-left: 30%;
 }
 
