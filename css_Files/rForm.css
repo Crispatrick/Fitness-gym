@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#rform {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.474), rgba(0, 0, 0, 0.7)), url('../images/rForm/rFormbg.png');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.p_regForm {
+    display: flex;
+    font-size: 80px;
+    font-family: Times New Roman;
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 8%;
+}
+
+.p_personalInfo {
+    display: flex;
+    font-size: 20px;
+    font-family: Times New Roman;
+    color: gold;
+}
+
+.p_membershipDetails {
+    display: flex;
+    font-size: 20px;
+    font-family: Times New Roman;
+    color: gold;
+}
+
+.p_emergencyContact {
+    display: flex;
+    font-size: 20px;
+    font-family: Times New Roman;
+    color: gold;
+}
+
+.p_startDate {
+    display: flex;
+    font-size: 15px;
+    font-family: Times New Roman;
+    color: gold;
+}
+
+.p_endDate {
+    display: flex;
+    font-size: 15px;
+    font-family: Times New Roman;
+    color: gold;
+}
