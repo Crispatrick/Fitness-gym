@@ -11,6 +11,9 @@ html, body {
 }
 
 #rform {
+    display: flex;
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align items to the top */
     width: 100%;
     height: 100vh; /* Full viewport height */
     background-image: linear-gradient(rgba(0, 0, 0, 0.474), rgba(0, 0, 0, 0.7)), url('../images/rForm/rFormbg.png');
@@ -18,63 +21,49 @@ html, body {
     background-attachment: fixed; /* Keeps the background image fixed when scrolling */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding-top: 20px; /* Space from the top */
 }
 
-.parent{
+.parent {
     display: flex;
-    justify-content: space-evenly;
-    margin-left: 2%;
-    text-align: left;
-    margin: 0 auto; /* centers the form if you want it centered horizontally */
-    max-width: 500px; /* optional: sets a max-width for the form */
+    font-size: 30px;
+    text-align: center;
+}
+
+.child {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    max-width: 50%; /* Ensure it uses the full width of parent */
+}
+
+.tBox {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Full width for text boxes */
+    height: 2rem;
+    box-sizing: border-box;
 }
 
 .p_regForm {
-    display: flex;
     font-size: 80px;
-    font-family: Times New Roman;
+    font-family: 'Times New Roman', serif;
     color: white;
-    margin-top: 10%;
-    margin-bottom: 8%;
+    margin: 0 0 20px; /* Adjust margin for spacing */
+    text-align: center; /* Center the title text */
     align-items: center;
-    text-align: center; /* Center the text */
-    font-weight: bold;
 }
 
 .p_personalInfo {
-    display: flex;
-    align-items: center;
-    justify-content: baseline;
     font-size: 20px;
-    font-family: Times New Roman;
+    font-family: 'Times New Roman', serif;
     color: gold;
+    margin-bottom: 15px; /* Add spacing below this header */
 }
 
 .p_membershipDetails {
-    display: flex;
     font-size: 20px;
-    font-family: Times New Roman;
+    font-family: 'Times New Roman', serif;
     color: gold;
+    margin-bottom: 15px; /* Add spacing below this header */
 }
-
-.p_emergencyContact {
-    display: flex;
-    font-size: 20px;
-    font-family: Times New Roman;
-    color: gold;
-}
-
-.p_startDate {
-    display: flex;
-    font-size: 15px;
-    font-family: Times New Roman;
-    color: gold;
-}
-
-.p_endDate {
-    display: flex;
-    font-size: 15px;
-    font-family: Times New Roman;
-    color: gold;
-}
-

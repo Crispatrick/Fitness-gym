@@ -48,16 +48,19 @@
     height: 2rem;
     box-sizing: border-box;
 }
+
 #preName{
     display: flex; /* or display: block; */
     width: 100%; /* Ensure parent takes full width */
     max-width: 1400px; /* Optional: limit max width */
 }
+
 #preName *{
     flex: 1; /* This allows children to grow and fill the parent's width */
     width: 100%; /* Ensure each child takes full width */
     box-sizing: border-box; /* Include padding and borders in width calculation */
 }
+
 #preBtn{
     align-self: center;
     width: 50%;
@@ -69,6 +72,7 @@
     border-color: rgba(240, 248, 255, 0);
     color: var(--black);
 }
+
 #preBtn:active{
     background-color: rgb(131, 116, 31);
 }
@@ -91,8 +95,6 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
 }
-
-
 
 #pRegG2 h2{
     display: block;

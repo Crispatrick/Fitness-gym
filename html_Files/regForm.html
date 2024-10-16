@@ -14,82 +14,57 @@
             <p class="p_regForm"> REGISTRATION FORM </p>   
 
             <p class="p_personalInfo"> PERSONAL INFORMATION </p> 
+
+            <div class="child">
             
- <!--            <label style="display: inline-block; width: 100px; text-align: center;"> FIRST NAME </label> -->
-            <input type="text" name="fname" placeholder="FIRST NAME" required>
-
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> LAST NAME </label> -->
-            <input type="text" name="lname" placeholder="LAST NAME" required>
-<!-- 
-            <label style="display: inline-block; width: 100px; text-align: center;"> DATE OF BIRTH </label> -->
-            <input type="date" name="birthDate" placeholder="DATE OF BIRTH" required>
-<!-- 
-            <label style="display: inline-block; width: 100px; text-align: left;"> GENDER </label> -->
-            <input list="gender" name="gender" placeholder="-SELECT-" required>
-                <datalist id="genderType">
-                <option value="MALE">
-                <option value="FEMALE">
-                <option value="PREFER NOT TO SAY">
-                </datalist>
+            <input class="tBox" type="text" name="fname" placeholder="FIRST NAME" required>
+            <input class="tBox" type="text" name="lname" placeholder="LAST NAME" required>
+            <input class="tBox" type="date" name="birthDate" placeholder="DATE OF BIRTH" required>
+            <select class="tBox" name="gender" id="gender" required>
+                    <option value="" disabled selected>GENDER</option>
+                    <option value="male"> MALE </option>
+                    <option value="female"> FEMALE </option>
+                    <option value="!say"> PREFER NOT TO SAY </option>
+            </select>
 
             <br><br>
 
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> ADDRESS </label> -->
-            <input type="text" name="address" placeholder="ADDRESS" required>
+            <input class="tBox" type="text" name="address" placeholder="ADDRESS" required>
+            
+            </div>
 
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> EMAIL ADDRESS </label> -->
-            <input type="text" name="time" placeholder="EMAIL ADDRESS" required><br>
-
-<!--             <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label> -->
-            <input type="tel" name="contact" placeholder="CONTACT NUMBER" required>
-
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> HEIGHT </label> -->
-            <input type="text" name="height" placeholder="HEIGHT" required>                
-
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> WEIGHT </label> -->
-            <input type="text" name="weight" placeholder="WEIGHT" required>    
-
+            <div class="child">
+            <input class="tBox" type="text" name="time" placeholder="EMAIL ADDRESS" required>
+            <input class="tBox" type="tel" name="contact" placeholder="CONTACT NUMBER" required>
+            <input class="tBox" type="text" name="height" placeholder="HEIGHT" required>                
+            <input class="tBox" type="text" name="weight" placeholder="WEIGHT" required>  
+            
             <br><br>
+            </div>
 
-            <p class="p_membershipDetails"> MEMBERSHIP DETAILS </p>
+            <div class="child">
+                <p class="p_membershipDetails"> MEMBERSHIP DETAILS </p>
+                <select class="tBox" name="membershipType" id="mType" required>
+                    <option value="" disabled selected>GENDER</option>
+                    <option value="bronze"> BRONZE </option>
+                    <option value="silver"> SILVER </option>
+                    <option value="gold"> GOLD </option>
+                    <option value="customizePlan"> CUSTOMIZE PLAN </option>
+                </select>
+            </div>
 
-<!--             <label style="display: inline-block; width: 100px; text-align: left;"> MEMBERSHIP TYPE </label> -->
-            <input list="membershipType" name="mType" placeholder="-SELECT-" required>
-                <datalist id="memberType">
-                <option value="BRONZE">
-                <option value="SILVER">
-                <option value="GOLD">
-                <option value="CUSTOMIZE PLAN">
-                </datalist>
-
-            <p class="p_startDate"> START DATE </p>
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> START DATE </label> -->
-            <input type="date" name="startDate" required>
-            <p class="p_endDate"> END DATE </p>
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> END DATE </label> -->
-            <input type="date" name="endDate" required>
-
-            <p class="p_emergencyContact"> EMERGENCY CONTACT </p>
-
-<!--             <label style="display: inline-block; width: 100px; text-align: center;"> CONTACT NAME </label> -->
-            <input type="text" name="fname" placeholder="CONTACT NAME" required>
-             
-<!--             <label style="display: inline-block; width: 100px; text-align: left;"> RELATIONSHIP </label> -->
-            <input list="relationship" name="Rel" placeholder="-SELECT-" required>
-                <datalist id="Relationship">
-                <option value="MOTHER">
-                <option value="FATHER">
-                <option value="WIFE">
-                <option value="HUSBAND">
-                </datalist>
-
-<!--             <label style="display: inline-block; width: 100px; text-align: left;"> CONTACT NUMBER </label> -->
-            <input type="tel" name="Econtact" placeholder="CONTACT NUMBER" required>
-            <br>
-            <input type="submit" value="SUBMIT"><br>
-
+            <div class="child">
+                <p class="p_membershipDetails"> MEMBERSHIP DETAILS </p>
+                <select class="tBox" name="membershipType" id="mType" required>
+                    <option value="" disabled selected>GENDER</option>
+                    <option value="bronze"> BRONZE </option>
+                    <option value="silver"> SILVER </option>
+                    <option value="gold"> GOLD </option>
+                    <option value="customizePlan"> CUSTOMIZE PLAN </option>
+                </select>
+            </div>
+            
             </form>
-        </div> 
     </section>  
 
 </body>
