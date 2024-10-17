@@ -6,8 +6,14 @@
     $conn =  "";
     try {
         $conn = mysqli_connect($dbServer, $dbUser,$dbPass,$dbName);
-        echo"Connected na par sa database"; 
+        echo
+        "<script>
+        console.log('Connected to database.');
+        </script>";
     } catch (mysqli_sql_exception) {
-        echo"may problema par sa database";
+        echo
+        "<script>
+        console.log('Something is wrong in the database.');
+        </script>";
     };
 ?>  
