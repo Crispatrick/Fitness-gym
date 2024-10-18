@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css_files\pReg.css">
     <link rel="stylesheet" href="css_files\header.css">
     <link rel="stylesheet" href="css_files\footer.css">
+
     <title>Document</title>
 </head>
 <body>
