@@ -93,3 +93,7 @@ input[type="submit"]:hover {
     background-image: linear-gradient(rgba(255, 224, 47, 0.547), gold); /* Darker gradient on hover */
     color: black; /* Optional: Change text color on hover */
 }
+
+label {
+    
+}
