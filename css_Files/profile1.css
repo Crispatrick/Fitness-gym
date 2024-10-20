@@ -1,0 +1,103 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Calibri';
+}
+
+.body{
+    display: flex;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.507),rgba(0,0,0,0.507)),url('../images/Profile/PROFILE.png');
+    background-size: cover;
+}
+.container{
+    margin: 50px;
+    width: 45%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
+    border-radius: 1%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);  
+}
+
+img{
+    max-width: 170px;
+    float: left;
+    margin: 35px;
+    border-radius: 10%;
+}
+
+.text h2{
+    font-size: 50px;
+    margin-top: 5%;
+    padding: 5px;
+    color: white;
+}
+.text p{
+    font-size: 40px;
+    color: white;
+}
+
+.h_w{
+    color: #ffd700;
+    display: inline-block;
+    font-size: 230%;
+
+ 
+}
+
+.subcriptions{
+    margin-top: 3%;
+    width: 40%;
+    height: 350px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
+    border-radius: 1%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
+    display: inline-block; 
+}
+
+.subcrip{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin: 5%;
+    padding-left: 2%;
+}
+
+.website{
+    display: inline-block;
+    background-image: linear-gradient(rgba(163, 161, 161, 0.61),rgba(163, 161, 161, 0.61));
+    margin-top: 7%;
+    margin-left: 15%;
+}
+
+.site{
+    width: 50px;
+    height: 50px;
+}
+
+.emergency{
+    margin-top: 10%;
+    width: 100%;
+    height: 410px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
+    border-radius: 1%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
+    display: inline-block; 
+}
+
+.case{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 2%;
+    padding-left: 2%;
+}
+
+.info{
+    color: #ffd700;
+    font-size: 200%;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+/* header */
