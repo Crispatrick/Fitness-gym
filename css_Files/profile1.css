@@ -26,17 +26,20 @@ img{
     border-radius: 10%;
 }
 
+/* John doe */ 
 .text h2{
     font-size: 50px;
     margin-top: 5%;
     padding: 5px;
     color: white;
 }
+
+/* year gender */
 .text p{
     font-size: 40px;
     color: white;
 }
-
+/* height width of of text 2 */
 .h_w{
     color: #ffd700;
     display: inline-block;
