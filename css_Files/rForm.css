@@ -4,24 +4,12 @@
     box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
 #rform {
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: row;
-    height: 100vh; /* Optional: centers the form vertically in the viewport */
+    /* height: 100vh; */ /* Optional: centers the form vertically in the viewport */
     background-image: linear-gradient(rgba(0, 0, 0, 0.474), rgba(0, 0, 0, 0.7)), url('../images/rForm/rFormbg.png');
     background-size: cover; /* Ensures the image covers the entire element */
     background-attachment: fixed; /* Keeps the background image fixed when scrolling */
