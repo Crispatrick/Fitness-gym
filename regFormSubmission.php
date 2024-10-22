@@ -1,6 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css_Files/rForm.css">
+</head>
+<body>
+
 <?php
+    include("database.php");
+    include("html_Files/regForm.html");
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
-        $conn = mysqli_connect('localhost', 'root', '', 'gym') or die("Connection Failed: " . mysqli_connect_error());
+        /* $conn = mysqli_connect('localhost', 'root', '', 'gym') or die("Connection Failed: " . mysqli_connect_error()); */
 
         // Check if all required fields are set
         if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['bdate']) && isset($_POST['gender'])
@@ -25,7 +38,7 @@
             $Econtact = $_POST['Econtact'];
 
             // Correct the SQL query syntax
-            $sql = "INSERT INTO 'reg_form' (fname, lname, bdate, gender, address, emailAdd, contact, height,
+            $sql = "INSERT INTO reg_form (fname, lname, bdate, gender, address, emailAdd, contact, height,
                     weight, membershipType, startDate, endDate, emergency_name, relationship, Econtact) 
                     
             VALUES ('$fname', '$lname', '$bdate', '$gender', '$address', '$emailAdd', '$contact', '$height'
@@ -45,3 +58,6 @@
         }
     }
 ?>
+    
+</body>
+</html>

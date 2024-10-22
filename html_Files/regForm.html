@@ -9,7 +9,7 @@
 <body> -->
     
     <section id="rform">
-        <form action="regFormSubmission.php" method="post">  
+        <form action="" method="post">  
             <p class="p_regForm"> REGISTRATION FORM </p> 
 
             <!-- New row: Personal Information -->
@@ -20,12 +20,12 @@
                 <div class="row">
                     <input class="tBox" type="text" name="fname" placeholder="FIRST NAME" required>
                     <input class="tBox" type="text" name="lname" placeholder="LAST NAME" required>
-                    <input class="tBox" type="date" name="birthDate" placeholder="DATE OF BIRTH" required>
+                    <input class="tBox" type="date" name="bdate" placeholder="DATE OF BIRTH" required>
                     <select class="tBox" name="gender" id="gender" required>
                         <option value="" disabled selected>GENDER</option>
-                        <option value="male"> MALE </option>
-                        <option value="female"> FEMALE </option>
-                        <option value="!say"> PREFER NOT TO SAY </option>
+                        <option value="MALE"> MALE </option>
+                        <option value="FEMALE"> FEMALE </option>
+                        <option value="PREFER NOT TO SAY"> PREFER NOT TO SAY </option>
                     </select>
                     <input class="tBox" type="text" name="address" placeholder="ADDRESS" required>
                 </div>
@@ -46,10 +46,10 @@
                 <!-- Membership Type Select -->
                     <select class="tBox" name="membershipType" id="mType" required>
                         <option value="" disabled selected>PLAN</option>
-                        <option value="bronze"> BRONZE </option>
-                        <option value="silver"> SILVER </option>
-                        <option value="gold"> GOLD </option>
-                        <option value="customizePlan"> CUSTOMIZE PLAN </option>
+                        <option value="BRONZE"> BRONZE </option>
+                        <option value="SILVER"> SILVER </option>
+                        <option value="GOLD"> GOLD </option>
+                        <option value="CUSTOMIZE PLAN"> CUSTOMIZE PLAN </option>
                     </select>
 
                     <!-- Start Date -->
@@ -69,17 +69,17 @@
                     <input class="tBox" type="text" name="emergency_name" placeholder="CONTACT NAME" required>
                     <select class="tBox" name="relationship" id="Rel" required>
                         <option value="" disabled selected>RELATIONSHIP</option>
-                        <option value="mother"> MOTHER </option>
-                        <option value="father"> FATHER </option>
-                        <option value="wife"> WIFE </option>
-                        <option value="husband"> HUSBAND </option>
+                        <option value="MOTHER"> MOTHER </option>
+                        <option value="FATHER"> FATHER </option>
+                        <option value="WIFE"> WIFE </option>
+                        <option value="HUSBAND"> HUSBAND </option>
                     </select>
                     <input class="tBox" type="tel" name="Econtact" placeholder="CONTACT NUMBER" required>
 
                 </div>
             </div>
 
-            <input type="submit" value="SUBMIT">
+            <input type="submit" name="submit" value="SUBMIT">
         </form>
     </section>  
 
