@@ -9,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
+        <!-- to logout -->
+        
     <?php
             /* This is for login */
             session_start(); 
@@ -82,7 +84,6 @@
             include('html_Files\\profile1.html');
             include("html_Files\\footer.html");
     ?>
-    <!-- to logout -->
-    <a href="logout.php">LOGOUT</a>
+
 </body>
 </html>
