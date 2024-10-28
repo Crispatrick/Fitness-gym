@@ -10,6 +10,7 @@
 </head>
 <body>
         <!-- to logout -->
+         <a href="index.php">logout</a>
         
     <?php
             /* This is for login */
@@ -81,7 +82,7 @@
 
 
             include("html_Files\\header.html");
-            include('html_Files\\profile1.html');
+            include('html_Files\\profile1.php');
             include("html_Files\\footer.html");
     ?>
 
