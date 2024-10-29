@@ -1,0 +1,71 @@
+/* Membership, Customize, and Date sections */
+.membership-customize-container {
+  display: flex;
+  flex-direction: column; /* Stack all elements vertically */
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Membership, Customize, and Date sections */
+.membership, .customize, .date-container {
+  width: 80%; /* Adjust width as needed */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Stack items in the membership section vertically */
+.membership {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Checkbox container for membership options */
+.checkbox-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox-container label {
+  margin-left: 5px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Payment method dropdown styling */
+.select {
+  margin-top: 15px;
+  padding: 8px;
+  width: 80%;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Date container styling */
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-container label {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.date-container input[type="date"] {
+  padding: 5px;
+  font-size: 16px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
