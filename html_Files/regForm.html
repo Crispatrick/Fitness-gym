@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,73 +6,49 @@
     <link rel="stylesheet" href="../css_Files/rForm.css">
     <title>Registration Form</title>
 </head>
-<body> -->
-    
+<body>
     <section id="rform">
-        <form action="regFormSubmission.php" method="post">  
+        <form action="regFormSubmission.php" method="POST">  
             <p class="p_regForm"> REGISTRATION FORM </p> 
 
-            <!-- New row: Personal Information -->
             <p class="p_personalInfo"> PERSONAL INFORMATION </p>  
 
             <div class="parent">
-                <!-- First row: Personal Information 1 -->
                 <div class="row">
                     <input class="tBox" type="text" name="fname" placeholder="FIRST NAME" required>
                     <input class="tBox" type="text" name="lname" placeholder="LAST NAME" required>
-                    <input class="tBox" type="date" name="bdate" placeholder="DATE OF BIRTH" required>
-                    <select class="tBox" name="gender" id="gender" required>
+                    <input class="tBox" type="date" name="bdate" required>
+                    <select class="tBox" name="gender" required>
                         <option value="" disabled selected>GENDER</option>
-                        <option value="MALE"> MALE </option>
-                        <option value="FEMALE"> FEMALE </option>
-                        <option value="PREFER NOT TO SAY"> PREFER NOT TO SAY </option>
+                        <option value="MALE">MALE</option>
+                        <option value="FEMALE">FEMALE</option>
+                        <option value="PREFER NOT TO SAY">PREFER NOT TO SAY</option>
                     </select>
                     <input class="tBox" type="text" name="address" placeholder="ADDRESS" required>
                 </div>
-                <!-- New row: Personal Information 2 -->
                 <div class="row">
                     <input class="tBox" type="text" name="emailAdd" placeholder="EMAIL ADDRESS" required>
+                    <input class="tBox" type="password" name="pWord" placeholder="PASSWORD" required>
                     <input class="tBox" type="tel" name="contact" placeholder="CONTACT NUMBER" required>
                     <input class="tBox" type="text" name="height" placeholder="HEIGHT" required>
                     <input class="tBox" type="text" name="weight" placeholder="WEIGHT" required>  
                 </div>
+                <div class="row">
+                    <input class="tBox" type="text" name="age" placeholder="AGE" required>
+                </div>
             </div>
 
-<!--             New row: Membership Details
-            <p class="p_membershipDetails"> MEMBERSHIP DETAILS </p>
-
-            <div class="parent">
-                <div class="row">
-                Membership Type Select
-                    <select class="tBox" name="membershipType" id="mType" required>
-                        <option value="" disabled selected>PLAN</option>
-                        <option value="BRONZE"> BRONZE </option>
-                        <option value="SILVER"> SILVER </option>
-                        <option value="GOLD"> GOLD </option>
-                        <option value="CUSTOMIZE PLAN"> CUSTOMIZE PLAN </option>
-                    </select>
-
-                    Start Date
-                    <input type="date" name="startDate" required>
-
-                    End Date
-                    <input type="date" name="endDate" required>
-                </div>
-            </div> -->
-
-            <!-- New row: Membership Details -->
             <p class="p_membershipDetails"> EMERGENCY CONTACT </p>
 
             <div class="parent">
                 <div class="row">
-                <!-- Membership Type Select -->
                     <input class="tBox" type="text" name="emergency_name" placeholder="CONTACT NAME" required>
-                    <select class="tBox" name="relationship" id="Rel" required>
+                    <select class="tBox" name="relationship" required>
                         <option value="" disabled selected>RELATIONSHIP</option>
-                        <option value="MOTHER"> MOTHER </option>
-                        <option value="FATHER"> FATHER </option>
-                        <option value="WIFE"> WIFE </option>
-                        <option value="HUSBAND"> HUSBAND </option>
+                        <option value="MOTHER">MOTHER</option>
+                        <option value="FATHER">FATHER</option>
+                        <option value="WIFE">WIFE</option>
+                        <option value="HUSBAND">HUSBAND</option>
                     </select>
                     <input class="tBox" type="tel" name="Econtact" placeholder="CONTACT NUMBER" required>
                 </div>
@@ -81,6 +57,5 @@
             <input type="submit" name="submit" value="SUBMIT">
         </form>
     </section>  
-
-<!-- </body>
-</html> -->
+</body>
+</html>

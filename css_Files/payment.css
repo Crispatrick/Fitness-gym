@@ -1,20 +1,63 @@
-/* Membership, Customize, and Date sections */
+#payment {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/Payment/paymentbg.png');
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Bronze label styling */
+.checkbox-container label[for="bronze"],
+.checkbox-container label[for="silver"],
+.checkbox-container label[for="gold"] {
+  background-color: white; /* Bronze, Silver, and Gold color */
+  margin-top: 12px;
+  padding: 8px 12px;
+  width: 53px;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Plan box */
+.child-div {
+  width: 60vw;
+  height: 65vh;
+  color: white;
+  font-family: 'Lucida Sans';
+  background-color: rgba(0, 0, 0, 0.79);
+  padding: 20px;
+  text-align: center;
+}
+.p_payment {
+  font-size: 50px;
+  font-family: Impact;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+/* General layout for membership, date, and customize */
 .membership-customize-container {
   display: flex;
-  flex-direction: column; /* Stack all elements vertically */
+  flex-direction: row;
   gap: 20px;
-  align-items: center;
   width: 100%;
 }
 
-/* Membership, Customize, and Date sections */
-.membership, .customize, .date-container {
-  width: 80%; /* Adjust width as needed */
+/* Membership and Customize sections */
+.membership, .customize {
+  flex: 1;
   padding: 10px;
   text-align: center;
 }
 
-/* Stack items in the membership section vertically */
+/* Stack the items in the membership section vertically */
 .membership {
   display: flex;
   flex-direction: column;
@@ -25,15 +68,10 @@
 .checkbox-container {
   margin-top: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-}
-
-.checkbox-container label {
-  margin-left: 5px;
-  color: white;
-  display: inline-block;
-  margin-bottom: 5px;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Payment method dropdown styling */
@@ -52,20 +90,53 @@
 /* Date container styling */
 .date-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  flex-direction: row; 
+  gap: 20px;
+  justify-content: center;
 }
 
-.date-container label {
+.date-field {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 155px;
+}
+
+.date-field label {
   color: white;
   margin-bottom: 5px;
 }
 
-.date-container input[type="date"] {
+.date-field input[type="date"] {
   padding: 5px;
   font-size: 16px;
-  width: 80%;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+/* Centering the submit button */
+.submit-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submit-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: 180px;
+  height: 55px;
+  color: white;
+  background-color: gold; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  color: white;
+  background-color: darkgoldenrod; 
 }

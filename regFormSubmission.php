@@ -17,9 +17,9 @@
 
         // Check if all required fields are set
         if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['bdate']) && isset($_POST['gender'])
-            && isset($_POST['address']) && isset($_POST['emailAdd']) && isset($_POST['contact']) && isset($_POST['height'])
-            && isset($_POST['weight']) && isset($_POST['membershipType']) && isset($_POST['startDate']) && isset($_POST['endDate'])
-            && isset($_POST['emergency_name']) && isset($_POST['relationship']) && isset($_POST['Econtact'])) {
+            && isset($_POST['address']) && isset($_POST['emailAdd']) && isset($_POST['pWord']) && isset($_POST['contact'])
+            && isset($_POST['height']) && isset($_POST['weight']) && isset($_POST['age']) && isset($_POST['emergency_name'])
+            && isset($_POST['relationship']) && isset($_POST['Econtact'])) {
 
             $fname = $_POST['fname'];
             $lname = $_POST['lname'];
@@ -27,22 +27,21 @@
             $gender = $_POST['gender'];
             $address = $_POST['address'];
             $emailAdd = $_POST['emailAdd'];
+            $pWord = $_POST['pWord'];
             $contact = $_POST['contact'];
             $height = $_POST['height'];
             $weight = $_POST['weight'];
-            $membershipType = $_POST['membershipType'];
-            $startDate = $_POST['startDate'];
-            $endDate = $_POST['endDate'];
+            $age = $_POST['age'];
             $emergency_name = $_POST['emergency_name'];
             $relationship = $_POST['relationship'];
             $Econtact = $_POST['Econtact'];
 
             // Correct the SQL query syntax
-            $sql = "INSERT INTO reg_form (fname, lname, bdate, gender, address, emailAdd, contact, height,
-                    weight, membershipType, startDate, endDate, emergency_name, relationship, Econtact) 
+            $sql = "INSERT INTO reg_form (fname, lname, bdate, gender, address, emailAdd, pWord, contact, 
+                    height, weight, age, emergency_name, relationship, Econtact) 
                     
-            VALUES ('$fname', '$lname', '$bdate', '$gender', '$address', '$emailAdd', '$contact', '$height'
-                , '$weight', '$membershipType', '$startDate', '$endDate', '$emergency_name', '$relationship', '$Econtact')";
+            VALUES ('$fname', '$lname', '$bdate', '$gender', '$address', '$emailAdd', '$pWord', '$contact', 
+                    '$height', '$weight', '$age', '$emergency_name', '$relationship', '$Econtact')";
 
             // Execute the query
             $query = mysqli_query($conn, $sql);
