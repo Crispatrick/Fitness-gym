@@ -28,6 +28,8 @@
         <img src="images/Profile/profilePic.jpg" alt="">
         <div class="child">
         <h2><?php
+/*             echo $_SESSION['email'];
+            echo $_SESSION['userId']; */
             $email = $_SESSION['email'];
             $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
             $result = mysqli_query($conn, $sql);
@@ -134,7 +136,10 @@
             }
         ?>
             </div>
-            
+        <!-- to logout -->
+         <div id="logout">
+            <a href="logout.php">logout</a>
+        </div>
         </div>
         
     </div>
@@ -142,14 +147,49 @@
     
     <div class="subcriptions">
         <div class="subcrip">
-        <p>NO SUBCRIPTIONS</p>
+            
+                <?php
+                    $email = $_SESSION['email'];
+                    $stmt = mysqli_prepare($conn, " SELECT plans.membership, plans.startDate, plans.endDate
+                                                    FROM plans INNER JOIN reg_form 
+                                                    ON plans.userId = reg_form.id
+                                                    WHERE reg_form.emailAdd = ?");
+                    
+                    // Execute the statement
+                    mysqli_stmt_bind_param($stmt, "s", $email);
+                    mysqli_stmt_execute($stmt);
+                    
+                    // Store result
+                    mysqli_stmt_store_result($stmt);
+                    mysqli_stmt_bind_result($stmt, $subscription, $start, $end);
+                    mysqli_stmt_fetch($stmt);
+              /*       echo "<p> Valid From {$start} to {$end}</p>" . $subscription . $start; */
+
+                    if ($subscription == "custom") {
+                        echo "<h1>" . $subscription . "</h1>";
+                        echo "<p id='valid'> Valid From {$start} to {$end}</p>";
+
+                    } else {
+                        echo$subscription;
+                    }
+                    
+
+/*                     if (mysqli_stmt_num_rows($stmt) > 0) {
+                        // User exists, now fetch the password
+                        mysqli_stmt_bind_result($stmt, $subscription);
+                        mysqli_stmt_fetch($stmt);
+                        echo$subscription;
+                    }; */
+                ?>
+           
+            <!-- <p>NO SUBCRIPTIONS</p> -->
         </div>
-        <div class="website">
+<!--         <div class="website">
             <img src="images/Profile/facebook.png" alt="" class="site">
             <img src="images/Profile/twitter.png" alt="" class="site">
             <img src="images/Profile/instagram.jpg" alt="" class="site">
             <img src="images/Profile/whatsapp.png" alt="" class="site">
-        </div>
+        </div> -->
 
         <!-- emergency -->
         <div class="emergency">
@@ -175,7 +215,7 @@
                 <P class="infoSec">RELATIONSHIP</P>
             <div class="name">
         <?php
-            $email = $_SESSION['email'];
+           
             $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
             $result = mysqli_query($conn, $sql);
 

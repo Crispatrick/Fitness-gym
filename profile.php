@@ -9,21 +9,22 @@
     <title>Document</title>
 </head>
 <body>
-        <!-- to logout -->
-         <a href="index.php">logout</a>
+
         
     <?php
             /* This is for login */
-            session_start(); 
+            /* session_start();  */
+            include("html_Files\\header.html");
             include("database.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (isset($_POST['emailLogin'], $_POST['pass'])){
+                    
         
                     $email = htmlspecialchars($_POST['emailLogin']);
+
                     $entered_password = htmlspecialchars($_POST['pass']);
 
-/*                 echo$email;
-                    echo$entered_password; */
+
 
             
                     /*// DEBUG
@@ -41,7 +42,7 @@
 
 
                     // Prepare SQL statement to prevent SQL injection
-                    $stmt = mysqli_prepare($conn, "SELECT fname FROM reg_form WHERE emailAdd = ?");
+                    $stmt = mysqli_prepare($conn, "SELECT password,id FROM reg_form WHERE emailAdd = ?");
                     mysqli_stmt_bind_param($stmt, "s", $email);
                     
                     // Execute the statement
@@ -52,8 +53,13 @@
 
                     if (mysqli_stmt_num_rows($stmt) > 0) {
                         // User exists, now fetch the password
-                        mysqli_stmt_bind_result($stmt, $stored_password);
+                        mysqli_stmt_bind_result($stmt, $stored_password, $userId);
                         mysqli_stmt_fetch($stmt);
+
+/*                      Debug lang
+                        echo $email;
+                        echo $entered_password; 
+                        echo $stored_password; */
                         
                         /* echo"Debug <br>" .$stored_password. " <br>"; */
 
@@ -61,7 +67,10 @@
                         if ($entered_password === $stored_password) {
                             // Password is correct
                             $_SESSION['email'] = $email; // Store email in session
-                            echo "Login successful!";
+                            $_SESSION['logged'] = true; // checker if login
+                            $_SESSION['userId'] = $userId; // checker if login
+                            
+                           /*  echo "Login successful!"; */
                             /* header('Location: index.php'); */
                         } else {
                             echo "Invalid password.";
@@ -81,9 +90,10 @@
 
 
 
-            include("html_Files\\header.html");
+
             include('html_Files\\profile1.php');
             include("html_Files\\footer.html");
+
     ?>
 
 </body>

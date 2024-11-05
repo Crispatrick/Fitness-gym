@@ -7,15 +7,31 @@
 <body> -->
 <section>
     <div class="header_navbar">
-    <img src="images\Header\logo.png" class="header_logo">
+    <a href="index.php"><img src="images\Header\logo.png" class="header_logo"></a>
     <ul>
         <li><a href="index.php">HOME</a></li>
-        <li><a href="">PROGRAMS</a></li>
-        <li><a href="profile.php">PROFILE</a></li>
-        <li><a href="pReg.php" class="header_button">INQUIRE</a></li>
+        <li><a href="index.php#programs">PROGRAMS</a></li>
+        <li><a href="auth.php">PROFILE</a></li>
+        
+        <?php
+            session_start(); // Start the session
+            
+            // Determine the link and text based on login status
+            if (empty($_SESSION['logged'])) {
+                $link = 'pReg.php';
+                $text = 'INQUIRE';
+            } else {
+                $link = 'pMethod.php';
+                $text = 'SUBSCRIBE';
+            }
+        ?>
+
+        <li><a href="<?php echo $link; ?>" class="header_button"><?php echo $text; ?></a></li>
         
     </ul>
 </div>
 </section>
+
+
 <!-- </body>
 </html> -->

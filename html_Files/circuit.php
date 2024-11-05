@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Solo Page</title>
-    <link rel="stylesheet" href="../css_Files/strength.css">
+    <link rel="stylesheet" href="../css_Files/circuit.css">
     <link rel="stylesheet" href="../css_Files/footer.css">
     <link rel="stylesheet" href="../css_Files/header.css">
 </head>
 <body>
     <!-- header section -->
     <div class="header_navbar">
-        <img src="../images\Header\logo.png" class="header_logo">
+        <img src="../images\Header\logo.png" src="../html_Files/homepage.html" class="header_logo">
         <ul>
             <li><a href="../index.php">HOME</a></li>
             <li><a href="">PROGRAMS</a></li>
@@ -17,28 +17,40 @@
         </ul>
     </div>
 
-    <div class="strength_background">
+    <div class="circuit_background">
         <div>
-        <h1 class="strength_athletic">STRENGHT & CONDITIONING</h1>
-        <h2 class="strength_training">TRAINING</h2>
-        <p class="strength_content">a form of exercise designed to improve overall physical performance by enhancing muscular 
-            strength, endurance, and cardiovascular fitness. It combines weightlifting, resistance training, aerobic exercise, 
-            and functional movements to develop strength, power, speed, agility, and mobility.</p>
+        <h1 class="circuit_athletic">CIRCUIT</h1>
+        <h2 class="circuit_training">TRAINING</h2>
+        <p class="circuit_content">Each station target different muscle goups or fitness components, 
+            such as strength, endurance, or cardiovascular health. Circuit training is efficient and versatile, 
+            offering a full-body workout that can be tailored to different fitness levels and goals.</p>
     </div>
-    
     <div>
         <br>
         <br>
         <br>
         <br>
-        <a class="strength_button" href="/html_Files/regForm.html">REGISTER NOW</a>
+        <?php
+            session_start(); // Start the session
+            
+            // Determine the link and text based on login status
+            if (empty($_SESSION['logged'])) {
+                $link = 'pReg.php';
+                $text = 'INQUIRE';
+            } else {
+                $link = 'pMethod.php';
+                $text = 'SUBSCRIBE';
+            }
+        ?>
+        <a href="../<?php echo $link; ?>" class="circuit_button"><?php echo $text; ?></a>
     </div>
     </div>
+
 <!-- footer section -->
 <footer>
     <div class="footer_row">
         <div>
-            <img src="../images\Footer\logo.png" class="footer_logo">
+            <img src="../images/Footer/logo.png" class="footer_logo">
      </div>
 
         <div class="footer_info">
@@ -70,7 +82,7 @@
         <div class="footer_info">
             <h1 class="footer_email">SOCIALS</h1>
             <br>
-                    <img src="../images\Footer\website.jpg" class="footer_site">
+                    <img src="../images/Footer/website.jpg" class="footer_site">
                     
                 </div>
             </div>

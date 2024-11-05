@@ -28,7 +28,20 @@
         <br>
         <br>
         <br>
-        <a class="athletic_button">REGISTER NOW</a>       
+        <?php
+            session_start(); // Start the session
+            
+            // Determine the link and text based on login status
+            if (empty($_SESSION['logged'])) {
+                $link = 'pReg.php';
+                $text = 'INQUIRE';
+            } else {
+                $link = 'pMethod.php';
+                $text = 'SUBSCRIBE';
+            }
+        ?>
+        <a href="../<?php echo $link; ?>" class="athletic_button"><?php echo $text; ?></a>
+        <<!-- a class="athletic_button">REGISTER NOW</a>        -->
     </div>
     </div>
     

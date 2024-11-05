@@ -32,7 +32,19 @@
         <br>
         <br>
         <br>
-        <a class="weights_button" href="/html_Files/regForm.html">REGISTER NOW</a>
+        <?php
+            session_start(); // Start the session
+            
+            // Determine the link and text based on login status
+            if (empty($_SESSION['logged'])) {
+                $link = 'pReg.php';
+                $text = 'INQUIRE';
+            } else {
+                $link = 'pMethod.php';
+                $text = 'SUBSCRIBE';
+            }
+        ?>
+        <a href="../<?php echo $link; ?>" class="weights_button"><?php echo $text; ?></a>
     </div>
     </div>
 

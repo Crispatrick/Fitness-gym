@@ -10,8 +10,6 @@
 
 <?php
     include("database.php");
-    include("html_Files/regForm.html");
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
         /* $conn = mysqli_connect('localhost', 'root', '', 'gym') or die("Connection Failed: " . mysqli_connect_error()); */
 
@@ -49,6 +47,8 @@
             // Check if the query was successful
             if ($query) {
                 echo "Entry Successful";
+                header("Location: index.php");
+                exit; // Exit to ensure no further code is executed
             } else {
                 echo "Error Occurred: " . mysqli_error($conn);
             }
