@@ -199,7 +199,6 @@
             }
         ?>
                 </div>
-                <P class="infoSec">ALTERNATE PHONE NUMBER</P>
             </div>
             
         </div>
