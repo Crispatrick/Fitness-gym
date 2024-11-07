@@ -13,14 +13,15 @@
 
 <!-- <body> -->
     <!-- header -->
-    <!-- <div class="header_navbar">
-        <img src="../images\Header\logo.png" class="header_logo">
+    <div class="header_navbar">
+        <img src="images\Header\logo.png" class="header_logo">
         <ul>
-            <li><a href="../index.php">HOME</a></li>
-            <li><a href="">PROGRAMS</a></li>
-            <li><a href="../pReg.php" class="header_button">INQUIRE</a></li>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="./#programs">PROGRAMS</a></li>
+            <li><a href="profile.php">PROFILE</a></li>
+            <li><a href="pReg.php" class="header_button">INQUIRE</a></li>
         </ul>
-    </div> -->
+    </div>
     <!-- end header -->
     
 <div class="body">
@@ -142,13 +143,22 @@
     
     <div class="subcriptions">
         <div class="subcrip">
-        <p>NO SUBCRIPTIONS</p>
+        <?php
+            $email = $_SESSION['email'];
+            $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
+            $result = mysqli_query($conn, $sql);
+
+            if(mysqli_num_rows($result) > 0){
+                $rows = mysqli_fetch_assoc($result);
+                echo "<h1>" . $rows["membershipType"] . "<h1>";
+            }
+        ?>
         </div>
         <div class="website">
             <img src="images/Profile/facebook.png" alt="" class="site">
             <img src="images/Profile/twitter.png" alt="" class="site">
-            <img src="images/Profile/instagram.jpg" alt="" class="site">
-            <img src="images/Profile/whatsapp.png" alt="" class="site">
+            <img src="images/Profile/instagram.png" alt="" class="site">
+            <img src="images/Profile/whatsapp1.png" alt="" class="site">
         </div>
 
         <!-- emergency -->
@@ -205,49 +215,5 @@
     </div>
 </div>
 
-<!-- footer -->
-<!-- <footer>
-    <div class="footer_row">
-        <div>
-            <img src="../images\Footer\logo.png" class="footer_logo">
-     </div>
-
-        <div class="footer_info">
-            <h1 class="footer_email">OUR PROGRAMS</h1>
-            <br>
-            <ul>
-                <li><a href="../html_Files/circuit.html">Circuit Training</a></li>
-                <br><br>
-                <li><a href="../html_Files/athletic.html">Atheletic </a></li>
-                <br><br>
-                <li><a href="../html_Files/weights.html">Weights </a></li>
-                <br><br>
-                <li><a href="../html_Files/strength.html">Strenght </a></li>
-            </ul>
-        </div>
-
-        <div class="footer_info">
-            <h1 class="footer_email">ADDRESS</h1>
-            <br>
-            <p style="font-size: 15px;">123, sample, Testing Street,</P>
-            <p style="font-size: 15px;">Manila, Philippines</P>
-            <p style="font-size: 15px;" class="footer_email">EMAIL</p>
-            <p style="font-size: 15px;"> jcsfitnessclub@gmail.com </p>
-            <p style="font-size: 15px;" class="footer_email"> PHONE </p>
-            <p style="font-size: 15px;"> 123456789 </p>
-        </div>
-
-
-        <div class="footer_info">
-            <h1 class="footer_email">SOCIALS</h1>
-            <br>
-                    <img src="../images\Footer\website.jpg" class="footer_site">
-                    
-                </div>
-            </div>
-        <hr style="width: 50%; border: 0; border-bottom: 2px solid #d2f121; margin: 20px auto;">
-        <p class="footer_copyright">Copyright 2024.All Right Reserved<br></p>
-        
-</footer>
 </body>
-</html> -->
+</html>

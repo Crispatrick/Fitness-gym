@@ -11,8 +11,18 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="header_navbar">
+        <img src="images\Header\logo.png" class="header_logo">
+        <ul>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="./#programs">PROGRAMS</a></li>
+            <li><a href="profile.php">PROFILE</a></li>
+            <li><a href="pReg.php" class="header_button">INQUIRE</a></li>
+            
+        </ul>
+    </div>
+
     <?php
-        include("html_Files\\header.html");
         include("html_Files\\preReg.html");
         include("html_Files\\footer.html");
     ?>

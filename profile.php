@@ -81,7 +81,7 @@
 
 
 
-            include("html_Files\\header.html");
+
             include('html_Files\\profile1.php');
             include("html_Files\\footer.html");
     ?>
