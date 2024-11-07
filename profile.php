@@ -41,7 +41,7 @@
 
 
                     // Prepare SQL statement to prevent SQL injection
-                    $stmt = mysqli_prepare($conn, "SELECT fname FROM reg_form WHERE emailAdd = ?");
+                    $stmt = mysqli_prepare($conn, "SELECT password FROM reg_form WHERE emailAdd = ?");
                     mysqli_stmt_bind_param($stmt, "s", $email);
                     
                     // Execute the statement

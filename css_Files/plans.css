@@ -151,7 +151,6 @@
   border-radius: 5px;         /* Rounded corners */
   cursor: pointer;             /* Pointer cursor on hover */
   font-size: 16px;            /* Font size for buttons */
-  text-transform: uppercase;
   margin-left: 30%;
 }
 
