@@ -11,9 +11,11 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.507),rgba(0,0,0,0.507)),url('../images/Profile/PROFILE.png');
     background-size: cover;
 }
+
+/* this container style the first box which is the john doe */
 .container{
     margin: 50px;
-    width: 45%;
+    width: 52%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);  
@@ -25,24 +27,23 @@ img{
     float: left;
     margin: 35px;
     border-radius: 10%;
+    
 }
 
-
-/* John doe */ 
 .child{
     color: white;
     font-size: 50px;
     margin-top: 7%;
-    padding-left: 40%;
+    padding-left: 30%;
 }
 
 
-/* here is the css of all information on fist box */
+/* in here section means you have control of the .height weight birthday.... the data means you have the control in data base*/
 .section1{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 4.3em;
+    gap: 8.5em;
     margin-left: 4%;
 
 }
@@ -51,28 +52,28 @@ img{
     font-size: 130%;
     display: flex;
     margin-left: 4%;
-    gap: 5em;
+    gap: 8.8em;
     margin-bottom: 2%;
 }
 .section2{
     color: #f4f800;
     font-size: 200%;
     display: flex;
-    gap: 4em;
+    gap: 9em;
     margin-left: 2%;
 }
 .data2{
     color: #f8f8f8;
     font-size: 90%;
     display: flex;
-    margin-left: 4%;
-    gap: 7em;
+    padding-left: 4%;
+    gap: 12.5em;
 }
 .section3{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 4.3em;
+    gap: 8.5em;
     margin-left: 1%;
     margin-top: 4%;
 }
@@ -80,17 +81,20 @@ img{
     color: #f8f8f8;
     font-size: 100%;
     display: flex;
-    margin-left: 4%;
-    gap: 1.5em;
+    margin-left: 3%;
+    gap: 1.8em;
     margin-bottom: 2%;
 }
 .infoSec{
     color: #f4f800;
     font-size: 30px;
+    margin-left: 2%;
+    padding: 2%;
 }
 .name{
     color: white;
     font-size: 100%;
+    margin-left: 4%;
 }
 
 
@@ -125,9 +129,9 @@ img{
 
 /* subcriptions section */
 .subcriptions{
-    margin-top: 3.5%;
+    margin-top: 3%;
     width: 40%;
-    height: 280px;
+    height: 340px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
@@ -137,17 +141,19 @@ img{
 .subcrip{
     text-align: center;
     font-size: 50px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 5%;
     padding-left: 2%;
+    padding-bottom: 2%;
 }
 
 .website{
-    display: inline-block;
-    background-image: linear-gradient(rgba(163, 161, 161, 0.61),rgba(163, 161, 161, 0.61));
-    height: 35%;
-    margin-top: 9%;
-    margin-left: 10%;
+    display: flex;
+    gap: 3em;
+    background-image: linear-gradient(rgba(163, 161, 161, 0.3),rgba(163, 161, 161, 0.3));
+    height: 30%;
+    padding-left: 5%;
+
 }
 
 .site{
@@ -157,9 +163,9 @@ img{
 
 /* emergency section */
 .emergency{
-    margin-top: 5%;
+    margin-top: 7%;
     width: 100%;
-    height: 355px;
+    height: 124%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
