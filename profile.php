@@ -10,7 +10,7 @@
 </head>
 <body>
         <!-- to logout -->
-         <a href="index.php">logout</a>
+         <a href="logout.php">logout</a>
         
     <?php
             /* This is for login */
