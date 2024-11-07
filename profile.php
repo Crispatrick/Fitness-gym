@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="css_Files/footer.css">
     <title>Document</title>
 </head>
-<body>
-        <!-- to logout -->
-         <a href="logout.php">logout</a>
-        
+<body>  
+
     <?php
             /* This is for login */
             session_start(); 
@@ -85,6 +83,7 @@
             include('html_Files\\profile1.php');
             include("html_Files\\footer.html");
     ?>
+    <!-- to logout -->
 
 </body>
 </html>

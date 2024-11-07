@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css_Files/header.css">
     <link rel="stylesheet" href="../css_Files/footer.css">
 </head> -->
-
 <!-- <body> -->
     <!-- header -->
     <div class="header_navbar">
@@ -19,6 +18,7 @@
             <li><a href="index.php">HOME</a></li>
             <li><a href="./#programs">PROGRAMS</a></li>
             <li><a href="profile.php">PROFILE</a></li>
+            <li><a href="logout.php">LOG OUT</a></li>
             <li><a href="pReg.php" class="header_button">
                     <?php echo isset($_SESSION['email']) ? 'SUBSCRIBE' : 'INQUIRE'; ?>
                 </a></li>
