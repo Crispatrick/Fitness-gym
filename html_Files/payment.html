@@ -1,13 +1,44 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./css_Files/plans.css">
-    <title> Plans </title>
-</head>
-<body> -->
+    <style>
+        /* Add styles for input fields to make them look similar to the select dropdown */
+        .select, .payment-input input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
 
-    <!-- Plans Section -->
-    <section id="payment">
+        .payment-input input {
+            margin-top: 10px; /* Add some space above the input fields */
+        }
+
+        .payment-input {
+            display: none; /* Hide by default, will be shown dynamically */
+        }
+
+        .membership-option {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .membership-option span {
+            font-weight: bold;
+        }
+    </style>
+    <title>Plans</title>
+</head>
+<body>
+
+<!-- Plans Section -->
+<section id="payment">
+    <form action="paymentSubmission.php" method="POST">
         <div class="image-container">
             <div class="child-div silver"> 
                 <p class="p_payment"> PAYMENT </p>
@@ -15,15 +46,25 @@
                     <!-- Select Membership and payment method -->
                     <div class="membership">
                         <h1> Select Membership </h1>
-                        <div class="checkbox-container">
-                            <input type="radio" name="membership" id="bronze" value="Bronze" onclick="toggleInputs('membership')">
-                            <label for="bronze">Bronze</label>
-                            <input type="radio" name="membership" id="silver" value="Silver" onclick="toggleInputs('membership')">
-                            <label for="silver">Silver</label>
-                            <input type="radio" name="membership" id="gold" value="Gold" onclick="toggleInputs('membership')">
-                            <label for="gold">Gold</label>
+                        <select class="select" name="membershipType" required onchange="toggleDateFields()">
+                            <option value="" disabled selected>MEMBERSHIP TYPE</option>
+                            <option value="BRONZE"> BRONZE - ₱1499 </option>
+                            <option value="SILVER"> SILVER - ₱3999 </option>
+                            <option value="GOLD"> GOLD - ₱4999 </option>
+                            <option value="CUSTOMIZEPLAN"> CUSTOMIZE PLAN </option>
+                        </select>
+
+                        <!-- Date fields, initially hidden -->
+                        <div class="date-container" id="dateContainer" style="display: none;">
+                            <div class="date-field">
+                                <input type="date" name="startDate" id="startDate">
+                            </div>
+                            <div class="date-field">
+                                <input type="date" name="endDate" id="endDate">
+                            </div>
                         </div>
-                        <select class="select" name="payment" required>
+
+                        <select class="select" name="paymentMethod" required onchange="togglePaymentInput()">
                             <option value="" disabled selected>PAYMENT METHOD</option>
                             <option value="CASH"> CASH </option>
                             <option value="GCASH"> GCASH </option>
@@ -31,62 +72,91 @@
                             <option value="CREDIT CARD"> CREDIT CARD </option>
                         </select>
 
-                        <div class="submit-container">
-                            <button type="submit" class="submit-button">Submit</button>
-                        </div>
-
-                    </div>
-    
-                    <!-- Customize Plan -->
-                    <div class="customize">
-                        <h1> Customize Plan </h1>
-
-                        <!-- Start and End Dates below Customize Plan -->
-                        <div class="date-container">
-                            <div class="date-field">
-                                <label for="startDate">Start Date</label>
-                                <input type="date" name="startDate" id="startDate" onclick="toggleInputs('customize')">
+                        <!-- Payment method input fields, initially hidden -->
+                        <div id="paymentInputContainer" style="display: none;">
+                            <div class="payment-input" id="gcashInput" style="display: none;">
+                                <input type="text" name="gcashNumber" id="gcashNumber" placeholder="Enter GCash Number">
                             </div>
-                            <div class="date-field">
-                                <label for="endDate">End Date</label>
-                                <input type="date" name="endDate" id="endDate" onclick="toggleInputs('customize')">
+                            <div class="payment-input" id="paymayaInput" style="display: none;">
+                                <input type="text" name="paymayaNumber" id="paymayaNumber" placeholder="Enter PayMaya Number">
+                            </div>
+                            <div class="payment-input" id="creditCardInput" style="display: none;">
+                                <input type="text" name="creditCardNumber" id="creditCardNumber" placeholder="Enter Credit Card Number">
                             </div>
                         </div>
-                            
-                        <select class="select" name="payment" required>
-                            <option value="" disabled selected>PAYMENT METHOD</option>
-                            <option value="CASH"> CASH </option>
-                            <option value="GCASH"> GCASH </option>
-                            <option value="PAYMAYA"> PAYMAYA </option>
-                            <option value="CREDIT CARD"> CREDIT CARD </option>
-                        </select>
 
                         <div class="submit-container">
-                            <button type="submit" class="submit-button">Submit</button>
+                            <button type="submit" name="submit" class="submit-button">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </form>
+</section>
 
-    <script>
-        function toggleInputs(activeSection) {
-            const membershipInputs = document.querySelectorAll('.membership input, .membership select');
-            const customizeInputs = document.querySelectorAll('.customize input, .customize select');
+<script>
+    function toggleDateFields() {
+        const membershipType = document.querySelector('select[name="membershipType"]').value;
+        const dateContainer = document.getElementById('dateContainer');
+        const startDateInput = document.getElementById('startDate');
+        const endDateInput = document.getElementById('endDate');
+        
+        // Show date fields if 'CUSTOMIZE PLAN' is selected, otherwise hide them
+        if (membershipType === 'CUSTOMIZEPLAN') {
+            dateContainer.style.display = 'block';
+        } else {
+            dateContainer.style.display = 'none';
+            // Automatically set dates based on membership type
+            let startDate = new Date();
+            startDateInput.value = formatDate(startDate);
 
-            if (activeSection === 'membership') {
-                membershipInputs.forEach(input => input.disabled = false);
-                customizeInputs.forEach(input => input.disabled = true);
-            } else {
-                customizeInputs.forEach(input => input.disabled = false);
-                membershipInputs.forEach(input => input.disabled = true);
+            let endDate = new Date();
+            if (membershipType === 'BRONZE') {
+                endDate.setMonth(startDate.getMonth() + 1); 
+            } else if (membershipType === 'SILVER') {
+                endDate.setMonth(startDate.getMonth() + 3); 
+            } else if (membershipType === 'GOLD') {
+                endDate.setMonth(startDate.getMonth() + 6); 
             }
+
+            endDateInput.value = formatDate(endDate);
         }
-    </script>
-    
-         
-    <!-- End of Plan Section -->
-    
-<!-- </body>
-</html> -->
+    }
+
+    function togglePaymentInput() {
+        const paymentMethod = document.querySelector('select[name="paymentMethod"]').value;
+        const paymentInputContainer = document.getElementById('paymentInputContainer');
+        const gcashInput = document.getElementById('gcashInput');
+        const paymayaInput = document.getElementById('paymayaInput');
+        const creditCardInput = document.getElementById('creditCardInput');
+        
+        // Hide all payment inputs by default
+        gcashInput.style.display = 'none';
+        paymayaInput.style.display = 'none';
+        creditCardInput.style.display = 'none';
+
+        // Show the corresponding input field based on the selected payment method
+        if (paymentMethod === 'GCASH') {
+            gcashInput.style.display = 'block';
+        } else if (paymentMethod === 'PAYMAYA') {
+            paymayaInput.style.display = 'block';
+        } else if (paymentMethod === 'CREDIT CARD') {
+            creditCardInput.style.display = 'block';
+        }
+
+        // Show payment input container
+        paymentInputContainer.style.display = paymentMethod ? 'block' : 'none';
+    }
+
+    // Helper function to format the date as YYYY-MM-DD
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+</script>
+
+</body>
+</html>
