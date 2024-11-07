@@ -1,4 +1,8 @@
-<?php include ("database.php");?>
+<?php 
+include ("database.php");
+/* this is decrepit version, profile2.php is updated one */
+
+?>
 
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -166,11 +170,11 @@
               /*       echo "<p> Valid From {$start} to {$end}</p>" . $subscription . $start; */
 
                     if ($subscription == "custom") {
-                        echo "<h1>" . $subscription . "</h1>";
+                        echo "<h1 style='text-transform: uppercase;'>" . $subscription . "</h1>";
                         echo "<p id='valid'> Valid From {$start} to {$end}</p>";
 
                     } else {
-                        echo$subscription;
+                        echo "<h1 style='text-transform: uppercase;'>" . $subscription . "</h1>";
                     }
                     
 

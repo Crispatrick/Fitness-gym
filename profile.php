@@ -91,7 +91,7 @@
 
 
 
-            include('html_Files\\profile1.php');
+            include('html_Files\\profile2.php');
             include("html_Files\\footer.html");
 
     ?>

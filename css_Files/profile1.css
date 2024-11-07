@@ -129,13 +129,12 @@ img{
 
 /* subcriptions section */
 .subcriptions{
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
 
-    margin-top: 3%;
-    width: 40%;
-    height: 350px;
+/*     gap: 10rem; */
+
+/*     margin-top: 3%; */
+/*     width: 40%;
+    height: 350px; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
@@ -146,8 +145,8 @@ img{
     text-align: center;
     font-size: 50px;
     color: white;
-    margin: 5%;
-    padding-left: 2%;
+/*     margin: 5%;
+    padding-left: 2%; */
 }
 
 .website{
@@ -165,9 +164,9 @@ img{
 
 /* emergency section */
 .emergency{
-    margin-top: 25%;
-    width: 100%;
-    height: 113%;
+/*     margin-top: 25%; */
+/*     width: 100%; */
+/*     height: 113%; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
@@ -202,4 +201,15 @@ img{
 }
 #valid{
     font-size: 2rem;
+}
+#subsEmerg {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    gap: 3rem;              /* Space between items */
+    align-items: center;    /* Align items horizontally in the center */
+    justify-content: space-evenly; /* Vertically align items if the container has more height */
+    /* height: 100vh;   */        /* This ensures the container takes the full height of the screen */
+}
+#subsEmerg > * {
+    padding: 1rem;
 }
