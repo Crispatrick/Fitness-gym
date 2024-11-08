@@ -157,7 +157,7 @@
         <div class="subcrip">
         <?php
             $email = $_SESSION['email'];
-            $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
+            $sql = "SELECT * FROM payment_form WHERE emailAdd = '$email'";
             $result = mysqli_query($conn, $sql);
 
             if(mysqli_num_rows($result) > 0){
