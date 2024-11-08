@@ -1,37 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css_Files/plans.css">
-    <style>
-        /* Add styles for input fields to make them look similar to the select dropdown */
-        .select, .payment-input input {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-        }
-
-        .payment-input input {
-            margin-top: 10px; /* Add some space above the input fields */
-        }
-
-        .payment-input {
-            display: none; /* Hide by default, will be shown dynamically */
-        }
-
-        .membership-option {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .membership-option span {
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="./css_Files/payment.css">
     <title>Plans</title>
 </head>
 <body>
@@ -57,9 +27,11 @@
                         <!-- Date fields, initially hidden -->
                         <div class="date-container" id="dateContainer" style="display: none;">
                             <div class="date-field">
+                                <label for="startDate">Start Date</label>
                                 <input type="date" name="startDate" id="startDate">
                             </div>
                             <div class="date-field">
+                                <label for="endDate">End Date</label>
                                 <input type="date" name="endDate" id="endDate">
                             </div>
                         </div>
@@ -102,12 +74,10 @@
         const startDateInput = document.getElementById('startDate');
         const endDateInput = document.getElementById('endDate');
         
-        // Show date fields if 'CUSTOMIZE PLAN' is selected, otherwise hide them
         if (membershipType === 'CUSTOMIZEPLAN') {
-            dateContainer.style.display = 'block';
+            dateContainer.style.display = 'flex';
         } else {
             dateContainer.style.display = 'none';
-            // Automatically set dates based on membership type
             let startDate = new Date();
             startDateInput.value = formatDate(startDate);
 
@@ -131,12 +101,10 @@
         const paymayaInput = document.getElementById('paymayaInput');
         const creditCardInput = document.getElementById('creditCardInput');
         
-        // Hide all payment inputs by default
         gcashInput.style.display = 'none';
         paymayaInput.style.display = 'none';
         creditCardInput.style.display = 'none';
 
-        // Show the corresponding input field based on the selected payment method
         if (paymentMethod === 'GCASH') {
             gcashInput.style.display = 'block';
         } else if (paymentMethod === 'PAYMAYA') {
@@ -145,11 +113,9 @@
             creditCardInput.style.display = 'block';
         }
 
-        // Show payment input container
         paymentInputContainer.style.display = paymentMethod ? 'block' : 'none';
     }
 
-    // Helper function to format the date as YYYY-MM-DD
     function formatDate(date) {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0');
