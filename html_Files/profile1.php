@@ -87,8 +87,8 @@ include ("database.php");
         </div>
 
             <!-- birthday and address is in here and also the data -->
-            <div class="section2"><P>&nbsp;&nbsp;BIRTHDAY </P>
-            <P>&nbsp;&nbsp;ADDRESS</P></div>
+            <div class="section2"><P>BIRTHDAY </P>
+            <P>ADDRESS</P></div>
 
             <!-- data is in here -->
             <div class="data2">
@@ -114,8 +114,8 @@ include ("database.php");
         ?>
             </div>
             <!-- email and phone number is in here and also the data -->
-            <div class="section3"><P>&nbsp;&nbsp;EMAIL </P>
-            <P>&nbsp;&nbsp;PHONE NUMBER</P></div>
+            <div class="section3"><P>EMAIL </P>
+            <P>PHONE NUMBER</P></div>
             
             <!-- the data is in here -->
             <div class="data3">
