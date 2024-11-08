@@ -41,7 +41,7 @@
                 }
             ?>
         </div>
-
+            <!-- paku ka -->
         <div class="section2"><P>BIRTHDAY </P><P>ADDRESS</P></div>
         <div class="data2">
             <?php
