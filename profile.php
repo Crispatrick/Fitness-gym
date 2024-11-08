@@ -74,6 +74,7 @@
                             /* header('Location: index.php'); */
                         } else {
                             echo "Invalid password.";
+                            echo "<script> alert('Wrong Password or Username!');window.location.href = 'pReg.php'; </script>";
                         }
                     } else {
                         echo "No user found with that email.";
