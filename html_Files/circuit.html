@@ -20,20 +20,32 @@
 
     <div class="circuit_background">
         <div>
-        <h1 class="circuit_athletic">CIRCUIT</h1>
-        <h2 class="circuit_training">TRAINING</h2>
-        <p class="circuit_content">Each station target different muscle goups or fitness components, 
-            such as strength, endurance, or cardiovascular health. Circuit training is efficient and versatile, 
-            offering a full-body workout that can be tailored to different fitness levels and goals.</p>
+            <h1 class="circuit_athletic">CIRCUIT</h1>
+            <h2 class="circuit_training">TRAINING</h2>
+            <p class="circuit_content">Each station targets different muscle groups or fitness components, 
+                such as strength, endurance, or cardiovascular health. Circuit training is efficient and versatile, 
+                offering a full-body workout that can be tailored to different fitness levels and goals.</p>
+        </div>
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a class="circuit_button" id="registerButton" href="pMethod.php">REGISTER NOW</a>
+        </div>
     </div>
-    <div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a class="circuit_button" href="html_Files/regForm.html">REGISTER NOW</a>
-    </div>
-    </div>
+    
+    <script>
+        // Check if the user is logged in
+        const isLoggedIn = /* your logic here, e.g., checking a session or token */;
+    
+        // Change button text if user is logged in
+        const registerButton = document.getElementById('registerButton');
+        if (isLoggedIn) {
+            registerButton.textContent = 'SUBSCRIBE';
+        }
+    </script>
+    
 
 <!-- footer section -->
 <footer>

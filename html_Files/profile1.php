@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css_Files/header.css">
     <link rel="stylesheet" href="../css_Files/footer.css">
 </head> -->
-
 <!-- <body> -->
     <!-- header -->
     <div class="header_navbar">
@@ -19,6 +18,7 @@
             <li><a href="index.php">HOME</a></li>
             <li><a href="./#programs">PROGRAMS</a></li>
             <li><a href="profile.php">PROFILE</a></li>
+            <li><a href="logout.php">LOG OUT</a></li>
             <li><a href="pReg.php" class="header_button">
                     <?php echo isset($_SESSION['email']) ? 'SUBSCRIBE' : 'INQUIRE'; ?>
                 </a></li>
@@ -40,6 +40,18 @@
                 echo $rows["fname"];
             }
         ?></h2>
+
+        <?php
+            $email = $_SESSION['email'];
+            $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
+            $result = mysqli_query($conn, $sql);
+
+            if(mysqli_num_rows($result) > 0){
+                $rows = mysqli_fetch_assoc($result);
+                echo $rows["age"];
+            }
+        ?>
+        <br>
 
             <?php
             $email = $_SESSION['email'];
@@ -162,7 +174,7 @@
 
             if(mysqli_num_rows($result) > 0){
                 $rows = mysqli_fetch_assoc($result);
-                echo "<h1>" . $rows["membershipType"] . "<h1>";
+                echo "<h1>" . $rows["age"] . "<h1>";
                 
             }
         ?>

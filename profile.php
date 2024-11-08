@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="css_Files/footer.css">
     <title>Document</title>
 </head>
-<body>
-        <!-- to logout -->
-         <a href="logout.php">logout</a>
-        
+<body>  
+
     <?php
             /* This is for login */
             session_start(); 
@@ -61,7 +59,7 @@
                         if ($entered_password === $stored_password) {
                             // Password is correct
                             $_SESSION['email'] = $email; // Store email in session
-                            echo "Login successful!";
+                            /* echo "Login successful!"; */
                             /* header('Location: index.php'); */
                         } else {
                             echo "Invalid password.";
@@ -85,6 +83,7 @@
             include('html_Files\\profile1.php');
             include("html_Files\\footer.html");
     ?>
+    <!-- to logout -->
 
 </body>
 </html>
