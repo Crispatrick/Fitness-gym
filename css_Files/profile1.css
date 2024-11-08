@@ -44,7 +44,7 @@ img{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 8.2em;
+    gap: 7.4em;
     margin-left: 4%;
 
 }
@@ -53,14 +53,14 @@ img{
     font-size: 130%;
     display: flex;
     margin-left: 4%;
-    gap: 15.5em;
+    gap: 14em;
     margin-bottom: 2%;
 }
 .section2{
     color: #f4f800;
     font-size: 200%;
     display: flex;
-    gap: 9em;
+    gap: 8em;
     margin-left: 4%;
 }
 .data2{
@@ -68,13 +68,13 @@ img{
     font-size: 90%;
     display: flex;
     padding-left: 4%;
-    gap: 19.5em;
+    gap: 17.3em;
 }
 .section3{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 8.8em;
+    gap: 7.7em;
     margin-left: 4%;
     margin-top: 4%;
 }
@@ -83,7 +83,7 @@ img{
     font-size: 100%;
     display: flex;
     margin-left: 4%;
-    gap: 7.6em;
+    gap: 5em;
     margin-bottom: 2%;
 }
 .infoSec{
