@@ -43,7 +43,7 @@ img{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 8.5em;
+    gap: 8.2em;
     margin-left: 4%;
 
 }
@@ -52,7 +52,7 @@ img{
     font-size: 130%;
     display: flex;
     margin-left: 4%;
-    gap: 8.8em;
+    gap: 15.5em;
     margin-bottom: 2%;
 }
 .section2{
@@ -60,29 +60,29 @@ img{
     font-size: 200%;
     display: flex;
     gap: 9em;
-    margin-left: 2%;
+    margin-left: 4%;
 }
 .data2{
     color: #f8f8f8;
     font-size: 90%;
     display: flex;
     padding-left: 4%;
-    gap: 12.5em;
+    gap: 19.5em;
 }
 .section3{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 8.5em;
-    margin-left: 1%;
+    gap: 8.8em;
+    margin-left: 4%;
     margin-top: 4%;
 }
 .data3{
     color: #f8f8f8;
     font-size: 100%;
     display: flex;
-    margin-left: 3%;
-    gap: 1.8em;
+    margin-left: 4%;
+    gap: 7.6em;
     margin-bottom: 2%;
 }
 .infoSec{
@@ -132,9 +132,9 @@ img{
 
 /*     gap: 10rem; */
 
-/*     margin-top: 3%; */
-/*     width: 40%;
-    height: 350px; */
+    margin-top: 9.3%;
+    width: 100%;
+    height: 310px; 
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
@@ -145,8 +145,8 @@ img{
     text-align: center;
     font-size: 50px;
     color: white;
-/*     margin: 5%;
-    padding-left: 2%; */
+    margin: 15%;
+    /*padding-left: 2%; */
 }
 
 .website{
@@ -164,9 +164,9 @@ img{
 
 /* emergency section */
 .emergency{
-/*     margin-top: 25%; */
-/*     width: 100%; */
-/*     height: 113%; */
+    margin-top: 2%;
+    width: 100%;
+    height: 52%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
@@ -205,9 +205,9 @@ img{
 #subsEmerg {
     display: flex;
     flex-direction: column; /* Align children vertically */
-    gap: 3rem;              /* Space between items */
+    /* gap: 1rem; */              /* Space between items */
     align-items: center;    /* Align items horizontally in the center */
-    justify-content: space-evenly; /* Vertically align items if the container has more height */
+    /* justify-content: space-evenly; */ /* Vertically align items if the container has more height */
     /* height: 100vh;   */        /* This ensures the container takes the full height of the screen */
 }
 #subsEmerg > * {
