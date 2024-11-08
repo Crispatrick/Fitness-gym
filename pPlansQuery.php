@@ -30,7 +30,10 @@
             echo "Error inserting data: " . $stmt->error;
         }
 
+        
         // Close the statement
-        $stmt->close();        
+        $stmt->close();       
+        header("Location: profile.php");
+        exit(); // Stop script execution after redirect 
     }
 ?>

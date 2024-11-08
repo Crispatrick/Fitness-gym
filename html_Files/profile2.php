@@ -83,6 +83,8 @@
                         if ($membership == "custom") {
                             echo "<p id='valid'>Valid From {$start} to {$end}</p>";
                         }
+                    }else{
+                        echo "<h2 style='text-transform: uppercase;'>NO SUBSCRIPTION</h2>"; 
                     }
                 ?>
             </div>

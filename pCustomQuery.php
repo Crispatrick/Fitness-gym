@@ -40,6 +40,7 @@
 
         // Close the statement
         $stmt->close();
-
+        header("Location: profile.php");
+        exit(); // Stop script execution after redirect
     }
 ?>

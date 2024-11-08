@@ -78,6 +78,7 @@
                         }
                     } else {
                         echo "No user found with that email.";
+                        echo "<script> alert('Wrong Password or Username!');window.location.href = 'pReg.php'; </script>";
                     }
             
                     // Close the statement
