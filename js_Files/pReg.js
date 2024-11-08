@@ -1,9 +1,9 @@
 /* console.log("test"); */
 function dataReceived(isReceived) {
     if (isReceived) {
-        alert("Data has been added!");        
+        alert("Inquiry has been added!");        
     }else{
-        alert("Data has not been added!");
+        alert("Inquiry has not been added!");
     }
     
 }
