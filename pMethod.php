@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        include("html_Files\\header.html");
+        include("html_Files\\header.php");
         include("html_Files\\payment.html");
         include("html_Files\\footer.html");
     ?>

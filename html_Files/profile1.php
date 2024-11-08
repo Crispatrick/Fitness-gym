@@ -41,6 +41,18 @@
             }
         ?></h2>
 
+        <?php
+            $email = $_SESSION['email'];
+            $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
+            $result = mysqli_query($conn, $sql);
+
+            if(mysqli_num_rows($result) > 0){
+                $rows = mysqli_fetch_assoc($result);
+                echo $rows["age"];
+            }
+        ?>
+        <br>
+
             <?php
             $email = $_SESSION['email'];
             $sql = "SELECT * FROM reg_form WHERE emailAdd = '$email'";
@@ -162,7 +174,7 @@
 
             if(mysqli_num_rows($result) > 0){
                 $rows = mysqli_fetch_assoc($result);
-                echo "<h1>" . $rows["membershipType"] . "<h1>";
+                echo "<h1>" . $rows["age"] . "<h1>";
                 
             }
         ?>

@@ -59,7 +59,7 @@
                         if ($entered_password === $stored_password) {
                             // Password is correct
                             $_SESSION['email'] = $email; // Store email in session
-                            echo "Login successful!";
+                            /* echo "Login successful!"; */
                             /* header('Location: index.php'); */
                         } else {
                             echo "Invalid password.";

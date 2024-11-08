@@ -24,7 +24,7 @@
        /*   Pang Debug lang to ng login */
 /*         session_start(); // Start the session
         echo $_SESSION['email'];  */
-        include("html_Files\\header.html");
+        include("html_Files\\header.php");
         include("html_Files\\homepage.html");
         include("html_Files\\programs.html");
         include("html_Files\\plans.html");
