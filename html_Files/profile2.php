@@ -5,7 +5,7 @@
             <h2>
                 <?php
                     $email = $_SESSION['email'];
-                    $sql = "SELECT reg_form.fname, reg_form.gender, reg_form.height, reg_form.weight, 
+                    $sql = "SELECT reg_form.fname, reg_form.lname, reg_form.gender, reg_form.height, reg_form.weight, 
                                    reg_form.bdate, reg_form.address, reg_form.emailAdd, reg_form.contact, 
                                    reg_form.emergency_name, reg_form.relationship, reg_form.Econtact,
                                    plans.membership, plans.startDate, plans.endDate
@@ -19,7 +19,8 @@
 
                     if ($row = mysqli_fetch_assoc($result)) {
                         // User information
-                        echo $row["fname"];
+                        echo $row["fname"] . " " . $row["lname"];
+                        
                     }
                 ?>
             </h2>
@@ -41,7 +42,7 @@
                 }
             ?>
         </div>
-            <!-- paku ka -->
+            
         <div class="section2"><P>BIRTHDAY </P><P>ADDRESS</P></div>
         <div class="data2">
             <?php
