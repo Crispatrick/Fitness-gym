@@ -46,9 +46,10 @@
 
             // Check if the query was successful
             if ($query) {
-                echo "Entry Successful";
-                header("Location: index.php");
-                exit; // Exit to ensure no further code is executed
+/*                 echo "Entry Successful";
+                header("Location: index.php"); */
+                echo "<script> alert('USER ADDED!');window.location.href = 'pReg.php'; </script>";
+                /* exit; */ // Exit to ensure no further code is executed
             } else {
                 echo "Error Occurred: " . mysqli_error($conn);
             }

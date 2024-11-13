@@ -44,7 +44,7 @@ img{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 7.4em;
+    gap: 6.2em;
     margin-left: 4%;
 
 }
@@ -53,14 +53,14 @@ img{
     font-size: 130%;
     display: flex;
     margin-left: 4%;
-    gap: 14em;
+    gap: 11em;
     margin-bottom: 2%;
 }
 .section2{
     color: #f4f800;
     font-size: 200%;
     display: flex;
-    gap: 8em;
+    gap: 6.6em;
     margin-left: 4%;
 }
 .data2{
@@ -68,13 +68,13 @@ img{
     font-size: 90%;
     display: flex;
     padding-left: 4%;
-    gap: 17.3em;
+    gap: 14.3em;
 }
 .section3{
     color: #f4f800;
     font-size: 230%;
     display: flex;
-    gap: 7.7em;
+    gap: 6.6em;
     margin-left: 4%;
     margin-top: 4%;
 }
@@ -83,7 +83,7 @@ img{
     font-size: 100%;
     display: flex;
     margin-left: 4%;
-    gap: 5em;
+    gap: 7em;
     margin-bottom: 2%;
 }
 .infoSec{
@@ -133,9 +133,9 @@ img{
 
 /*     gap: 10rem; */
 
-    margin-top: 9.3%;
+    margin-top: 8%;
     width: 100%;
-    height: 310px; 
+    height: 290 px; 
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
@@ -147,7 +147,7 @@ img{
     font-size: 50px;
     color: white;
     margin: 10%;
-    /*padding-left: 2%; */
+    /*   */
 }
 
 .website{
@@ -167,7 +167,7 @@ img{
 .emergency{
     margin-top: 2%;
     width: 100%;
-    height: 52%;
+    height: 55%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.719),rgba(0, 0, 0, 0.829));
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 

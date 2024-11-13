@@ -1,0 +1,186 @@
+#membershipPlan {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/Payment/paymentbg.png');
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.h1_membership {
+    margin-bottom: 30px;
+}
+
+.h1_customize {
+    margin-bottom: 20px;
+}
+
+/* Bronze, Silver, and Gold labels styling */
+.checkbox-container label[for="bronze"],
+.checkbox-container label[for="silver"],
+.checkbox-container label[for="gold"] {
+    background-color: white;
+    margin-top: 12px;
+    padding: 8px 12px;
+    width: 53px;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Plan box */
+.child-div {
+    width: 100%;
+    max-width: 900px;
+    color: white;
+    font-family: 'Lucida Sans', sans-serif;
+    background-color: rgba(0, 0, 0, 0.79);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.p_payment {
+    font-size: 50px;
+    font-family: Impact, sans-serif;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* Membership, Date, and Customize Plan layout */
+.membership-customize-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Membership and Customize sections */
+.membership, .customize {
+    flex: 1;
+    min-width: 280px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Stack items vertically in membership section */
+.membership {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Checkbox container for membership options */
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Payment method dropdown styling */
+.select {
+    margin-top: 15px;
+    padding: 8px;
+    width: 80%;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Bronze Plan Details (initially hidden) */
+.plan-details {
+    display: none;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left; /* Align text to the left */
+}
+
+.plan-details p, .plan-details label {
+    margin-left: 10px; /* Add slight margin for readability */
+}
+
+/* Align checkboxes to the left of their labels */
+.plan-details label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.plan-details input[type="checkbox"] {
+    order: -1; /* Move checkbox before the label */
+    margin-right: 8px; /* Space between checkbox and text */
+}
+
+/* Date container styling */
+.date-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    justify-content: center;
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 155px;
+}
+
+.date-field label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.date-field input[type="date"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Centering the submit button */
+.submit-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: 180px;
+    height: 55px;
+    color: white;
+    background-color: gold; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    color: white;
+    background-color: darkgoldenrod; 
+}

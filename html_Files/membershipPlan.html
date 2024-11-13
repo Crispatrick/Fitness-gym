@@ -1,0 +1,160 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css_Files/plans.css">
+    <title> Plans </title>
+</head>
+<body> -->
+
+    <section id="membershipPlan">
+        <div class="image-container">
+            <div class="child-div silver">
+                <p class="p_payment">MEMBERSHIP PLAN</p>
+                <div class="membership-customize-container">
+                    <!-- Select Membership and payment method -->
+                    <div class="membership">
+                        <form action="pPlansQuery.php" method="POST">
+                            <h1 class="h1_membership">Select Membership</h1>
+                            <div class="checkbox-container">
+                                <input type="radio" name="membership" id="bronze" value="Bronze" onclick="showBronzeDetails(); toggleForms('membership')">
+                                <label for="bronze">Bronze</label>
+                                <input type="radio" name="membership" id="silver" value="Silver" onclick="showSilverDetails(); toggleForms('membership')">
+                                <label for="silver">Silver</label>
+                                <input type="radio" name="membership" id="gold" value="Gold" onclick="showGoldDetails(); toggleForms('membership')">
+                                <label for="gold">Gold</label>
+                            </div>
+    
+                            <!-- Bronze Plan Details -->
+                            <div id="bronzeDetails" class="plan-details">
+                                <p class="p_bronzeprice"><i> Price: ₱1499</i></p>
+                                <p> 1 MONTH</p>
+                                <p> No hidden charges</p>
+                                <label for="annual_membership">Annual Membership</label>
+                                <input type="checkbox" name="annual_membership" value="annual_membership">
+                                <br><br>
+                                <label for="unlimited_session">Unlimited Session</label>
+                                <input type="checkbox" name="unlimited_session" value="unlimited_session">
+                                <br><br>
+                                <label for="trainer_programs">Trainers & Programs</label>
+                                <input type="checkbox" name="trainer_programs" value="trainer_programs">
+                            </div>
+
+                            <!-- Silver Plan Details -->
+                            <div id="silverDetails" class="plan-details">
+                                <p class="p_silverprice"><i> Price: ₱3999</i></p>
+                                <p> 3 MONTHS</p>
+                                <p> No hidden charges</p>
+                                <label for="annual_membership_silver">Annual Membership</label>
+                                <input type="checkbox" name="annual_membership_silver" value="annual_membership">
+                                <br><br>
+                                <label for="unlimited_session_silver">Unlimited Session</label>
+                                <input type="checkbox" name="unlimited_session_silver" value="unlimited_session">
+                                <br><br>
+                                <label for="trainer_programs_silver">Trainers & Programs</label>
+                                <input type="checkbox" name="trainer_programs_silver" value="trainer_programs">
+                            </div>
+
+                            <!-- Gold Plan Details -->
+                            <div id="goldDetails" class="plan-details">
+                                <p class="p_goldprice"><i> Price: ₱4999</i></p>
+                                <p> 6 MONTHS</p>
+                                <p> No hidden charges</p>
+                                <label for="annual_membership_gold">Annual Membership</label>
+                                <input type="checkbox" name="annual_membership_gold" value="annual_membership">
+                                <br><br>
+                                <label for="unlimited_session_gold">Unlimited Session</label>
+                                <input type="checkbox" name="unlimited_session_gold" value="unlimited_session">
+                                <br><br>
+                                <label for="trainer_programs_gold">Trainers & Programs</label>
+                                <input type="checkbox" name="trainer_programs_gold" value="trainer_programs">
+                            </div>
+    
+                            <div class="submit-container">
+                                <button type="submit" class="submit-button">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <!-- Customize Plan -->
+                    <div class="customize">
+                        <form action="pCustomQuery.php" method="POST">
+                            <h1 class="h1_customize">Customize Plan</h1>
+                            <div class="date-container">
+                                <div class="date-field">
+                                    <label for="startDate">Start Date</label>
+                                    <input type="date" name="startDate" id="startDate" class="customize-input">
+                                </div>
+                                <div class="date-field">
+                                    <label for="endDate">End Date</label>
+                                    <input type="date" name="endDate" id="endDate" class="customize-input">
+                                </div>
+                            </div>
+                            <div class="submit-container">
+                                <button type="submit" class="submit-button">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function showBronzeDetails() {
+            document.getElementById('bronzeDetails').style.display = 'block';
+            document.getElementById('silverDetails').style.display = 'none';
+            document.getElementById('goldDetails').style.display = 'none';
+        }
+
+        function showSilverDetails() {
+            document.getElementById('bronzeDetails').style.display = 'none';
+            document.getElementById('silverDetails').style.display = 'block';
+            document.getElementById('goldDetails').style.display = 'none';
+        }
+
+        function showGoldDetails() {
+            document.getElementById('bronzeDetails').style.display = 'none';
+            document.getElementById('silverDetails').style.display = 'none';
+            document.getElementById('goldDetails').style.display = 'block';
+        }
+
+        function toggleForms(formType) {
+            if (formType === 'membership') {
+                // Disable the customize plan fields
+                toggleCustomizePlan(true);
+                // Enable the membership plan radio buttons
+                disableMembershipPlan(false);
+            } else {
+                // Disable the membership radio buttons
+                disableMembershipPlan(true);
+                // Enable the customize plan fields
+                toggleCustomizePlan(false);
+            }
+        }
+
+        function toggleCustomizePlan(disable) {
+            const inputs = document.querySelectorAll('.customize-input, .customize .submit-button');
+            inputs.forEach(input => {
+                input.disabled = disable;
+            });
+        }
+
+        function disableMembershipPlan(disable) {
+            const membershipRadios = document.querySelectorAll('input[name="membership"]');
+            membershipRadios.forEach(radio => {
+                radio.disabled = disable;
+            });
+        }
+
+        // This function will be called when the Customize Plan section is clicked
+        document.querySelector('.customize').addEventListener('click', function () {
+            toggleForms('customize');
+        });
+    </script>
+    
+    
+         
+    <!-- End of Plan Section -->
+    
+<!-- </body>
+</html> -->
