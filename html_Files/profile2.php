@@ -8,7 +8,7 @@
                     $sql = "SELECT reg_form.fname, reg_form.lname, reg_form.gender, reg_form.height, reg_form.weight, 
                                    reg_form.bdate, reg_form.address, reg_form.emailAdd, reg_form.contact, 
                                    reg_form.emergency_name, reg_form.relationship, reg_form.Econtact,
-                                   plans.membership, plans.startDate, plans.endDate
+                                   plans.membership, plans.startDate, plans.endDate, plans.id
                             FROM reg_form
                             LEFT JOIN plans ON reg_form.id = plans.userId
                             WHERE reg_form.emailAdd = ?";
@@ -79,6 +79,10 @@
                         $membership = $row["membership"];
                         $start = $row["startDate"];
                         $end = $row["endDate"];
+                        $memId = $row["id"];
+
+                        $_SESSION['membership'] = $membership;
+                        $_SESSION['memId'] = $memId;
         
                         echo "<h1 style='text-transform: uppercase;'>" . $membership . "</h1>";
                         if ($membership == "custom") {

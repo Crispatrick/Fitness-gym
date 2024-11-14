@@ -2,7 +2,7 @@
     $dbServer = "localhost";
     $dbUser = "root";
     $dbPass = "";
-    $dbName = "gym2";
+    $dbName = "gym";
     $conn =  "";
     try {
         $conn = mysqli_connect($dbServer, $dbUser,$dbPass,$dbName);

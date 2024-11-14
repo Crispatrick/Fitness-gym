@@ -9,10 +9,58 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+<?php
         include("database.php");
         include("html_Files/header.html");
-    
+?>
+
+
+<?php
+
+        // Prepare the SQL statement
+        $sql = "SELECT id, method, details,price FROM logs   ORDER BY id DESC";
+        $stmt = $conn->prepare($sql);
+
+        // Execute the statement
+        $stmt->execute();
+
+        // Bind result variables
+        $stmt->bind_result($id, $method, $details,$price);
+?>
+<div id="parentProduct">
+        <h1>LOGS</h1>
+        <table id="products">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Payment Method</th>
+                    <th>Payment Details</th>
+                    <th>Price</th>      
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Fetch values and output data for each row
+                    while ($stmt->fetch()) {
+                        echo "<tr>";
+                            echo "<td class='productData'>" . htmlspecialchars($id) . "</td>";
+                            echo "<td class='productData'>" . htmlspecialchars($method) . "</td>";
+                            echo "<td class='productData'>" . htmlspecialchars($details) . "</td>";
+                            echo "<td class='productData'>" . number_format($price, 2) . "</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
+        <div style="text-align: right; margin-top: 20px;">
+            <a href="php/edit.php" id="edit">EDIT</a>
+        </div>
+    </div>
+
+<hr>
+
+
+<?php
 
         // Prepare the SQL statement
         $sql = "SELECT id, fname, lname,bdate,gender,address, emailAdd,contact,height,weight,age FROM reg_form   ORDER BY id DESC";
@@ -23,9 +71,9 @@
 
         // Bind result variables
         $stmt->bind_result($id, $fname, $lname,$bdate,$gender,$address, $emailAdd,$contact,$height,$weight,$age);
-    ?>
-
+?>
     <div id="parentProduct">
+        <h1>MEMBERS</h1>
         <table id="products">
             <thead>
                 <tr>

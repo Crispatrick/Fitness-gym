@@ -15,7 +15,7 @@
         include("html_Files\\header.html");
         include("html_Files\\payment.html");
         include("html_Files\\footer.html");
-        include("pSubscriptionChecker.php");
+        /* include("pSubscriptionChecker.php"); */
     ?>
 </body>
 </html>

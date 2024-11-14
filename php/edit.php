@@ -108,7 +108,7 @@
         <!-- <hr> --> <!-- Horizontal rule for separation -->
 
         <div id="parentProduct">
-            <h1>EDIT PRODUCT</h1>            
+            <h1>EDIT Membership</h1>            
             <form action="update.php" method="POST">
                 <table id="products">
                         <thead>
